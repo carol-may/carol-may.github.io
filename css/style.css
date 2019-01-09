@@ -375,7 +375,43 @@ body{
 }
 .nav-tabs > li > a:hover {
     color: #FFFFFF;
+    background: 	1;
+    border: solid 2px #2E1221;
+}
+.navv-tabs > li.active > a, .navv-tabs > li.active > a:hover, .navv-tabs > li.active > a:focus {
+	color: #ffffff;
+    cursor: default;
     background: #2E1221;
+    border: solid 2px #000;
+}
+.navv-tabs > li > a {
+    margin-right: 3px;
+    font-size: 1em;
+    color: #000;
+    border: solid 2px #fff;
+    border-radius: 0px;
+	-webkit-border-radius: 0px;
+	-ms-border-radius: 0px;
+	-o-border-radius: 0px;
+	-moz-border-radius: 0px;
+    padding: .5em 1em;
+}
+.navv-tabs > li > a:focus{
+	background:transparent;
+}
+.navv-tabs {
+    border-bottom: none;
+    margin: 4em 0;
+    text-align: center;
+}
+.navv-tabs > li {
+    margin: 0 10px;
+    float: none;
+    display: inline-block;
+}
+.navv-tabs > li > a:hover {
+    color: #FFFFFF;
+    background: 	1;
     border: solid 2px #2E1221;
 }
 .agile-gallery-info{

@@ -748,6 +748,9 @@ div#design {
     position: relative;
     float: left;
 }
+.contact-form-right{
+background = none;
+}
 .styled-input:nth-child(1),.styled-input:nth-child(3){
 	margin-left:0;
 }

@@ -650,7 +650,7 @@ div#design {
 /*-- //modal --*/
 /*-- contact --*/
 .contact-form {
-    background: #f2f2f2;
+
 }
 .contact-info p{
 	color:#FFFFFF;
@@ -659,7 +659,8 @@ div#design {
     padding: 4em 0em 4em 13em;
 }
 .contact-form-left h5,.contact-form-right h5{
-    color: #000000;
+    color: #fff;
+    align: center;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 1.5em;
     font-weight: 700;
@@ -710,8 +711,7 @@ div#design {
 	margin:1em 0;
 }
 .contact-form-right{
-    padding: 4em 13em 4em 4em;
-    background: #e4e4e4;
+align: center;
 }
 .contact-form-grid{
 	margin:4em 0 0 0;

@@ -268,7 +268,7 @@ body{
 /*-- //introduction --*/
 /*-- about --*/
 .about,.contact{
-    background: #024059;
+    background: #111625;
 }
 .about-heading h3{
 	color:#FFFFFF;
@@ -282,7 +282,7 @@ body{
 /*-- Effect 1--*/
 .about-grid-left span{
 	font-size: 2em;
-    color: #024059;
+    color: #111625;
     display: inline-block;
     border-radius: 50%;
     text-decoration: none;
@@ -355,8 +355,8 @@ body{
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
 	color: #ffffff;
     cursor: default;
-    background: #024059;
-    border: solid 2px #024059;
+    background: #111625;
+    border: solid 2px #111625;
 }
 .nav-tabs > li > a {
     margin-right: 3px;
@@ -386,12 +386,12 @@ body{
 .nav-tabs > li > a:hover {
     color: #FFFFFF;
     background: 	1;
-    border: solid 2px #024059;
+    border: solid 2px #111625;
 }
 .navv-tabs > li.active > a, .navv-tabs > li.active > a:hover, .navv-tabs > li.active > a:focus {
 	color: #ffffff;
     cursor: default;
-    background: #024059;
+    background: #111625;
     border: solid 2px #000;
 padding: 10px;
 }
@@ -423,7 +423,7 @@ padding: 10px;
 .navv-tabs > li > a:hover {
     color: #FFFFFF;
     background: 	1;
-    border: solid 2px #024059;
+    border: solid 2px #111625;
 }
 .agile-gallery-info{
     padding: 1em;
@@ -453,10 +453,10 @@ padding: 10px;
 	-ms-transition: 0.5s all;
 }
 .w3_tab_img_left:hover .agile-gallery-info{
-    border-bottom: solid 2px #024059;
+    border-bottom: solid 2px #111625;
 }
 .w3_tab_img_left:hover .agile-gallery-info p{
-    color: #024059;
+    color: #111625;
 }
 /*-- //gallery --*/
 /*-- team --*/
@@ -551,7 +551,7 @@ padding: 10px;
 	background: #f26522;
 }
 .team-caption {
-    background: #024059;
+    background: #111625;
     padding: 1em;
     position: absolute;
     left: 0;
@@ -591,7 +591,7 @@ div#design {
 }
 .wthree-news-left h4{
     margin: 0;
-    color: #024059;
+    color: #111625;
     font-size: 2.5em;
     font-weight: 600;
 }
@@ -617,7 +617,7 @@ div#design {
 	text-decoration:none;
 }
 .date-text a:hover{
-    color: #024059;
+    color: #111625;
 }
 .date-text a:focus{
 	outline:none;
@@ -688,7 +688,7 @@ div#design {
 }
 .address-icon i.fa.fa-map-marker,.address-icon i.fa.fa-phone,.address-icon i.fa.fa-envelope{
     color: #ffffff;
-    background: #024059;
+    background: #111625;
     width: 40px;
     height: 40px;
     text-align: center;
@@ -716,7 +716,7 @@ div#design {
 	text-decoration:none;
 }
 .address-info p a:hover{
-	color:#024059;
+	color:#111625;
 }
 .address-grid:nth-child(2){
 	margin:1em 0;
@@ -826,15 +826,15 @@ background = none;
     transition: 0.5s all;
 }
 .contact-form-right input[type="submit"]:hover {
-    background:#024059;
+    background:#111625;
     color: #FFFFFF;
-	border: 2px solid #024059;
+	border: 2px solid #111625;
 }
 /*-- //contact --*/
 /*-- footer --*/
 footer{
 	padding:1em 0;
-	background: #024059;
+	background: #111625;
 	text-align:center;
 }
 footer p{
@@ -981,7 +981,7 @@ footer p a:hover{
 	.navbar-nav > li {
 	    float: none;
 		text-align: center;
-		background: #024059;
+		background: #111625;
 		display: block;
 	}
 	.navbar-nav > li > a {

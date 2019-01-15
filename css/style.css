@@ -21,11 +21,11 @@ body a{
   transition: 0.3s;
   padding: 15px; 
   top: 50%;
-  width: 100px; /* Set a specific width */
+  width: 115px; /* Set a specific width */
   text-decoration: none; /* Remove underline */
   font-size: 20px; /* Increase font size */
   color: white; /* White text color */
-  border-radius: 10px 5px 5px 10px; /* Rounded corners on the top right and bottom right side */
+  border-radius: 30px 0 0 30px; /* Rounded corners on the top right and bottom right side */
 }
 
 #Sidenav a:hover {
@@ -35,22 +35,22 @@ body a{
 /* The about link: 20px from the top with a green background */
 #sid1{
     margin-top: -90px;
-  background-color: #4CAF50;
+  background-color: rgba(17, 47, 65, 0.3);
 }
 
 #sid2 {
     margin-top: -30px;
-  background-color: #2196F3; /* Blue */
+  background-color: rgba(17, 47, 65, 0.3);
 }
 
 #sid3 {
     margin-top: 30px;
-  background-color: #f44336; /* Red */
+  background-color: rgba(17, 47, 65, 0.3);
 }
 
 #sid4 {
-    margin-top: 90px;
-  background-color: #555 /* Light Black */
+    margin-top: 95px;
+  background-color: rgba(17, 47, 65, 0.3);
 }
 html, body{
     font-size: 100%;
@@ -103,12 +103,11 @@ body{
     color: #FFFFFF;
     text-decoration: none;
     font-weight: 700;
-    padding: .2em .5em;
     font-family: 'Josefin Sans', sans-serif;
     letter-spacing: 6px;
 }
-.agileits-logo h1 a img{
-    width: 13%;
+.agileits-logo h1 a img{ 
+    width: 50%;
 }
 /*-- social-icons --*/
 .agileinfo-social-grids{
@@ -391,115 +390,39 @@ body{
     text-align: right;
     padding-right: 2em;
 }
+.abt{
+	background-color: #111625;
+}
 /*-- //about --*/
 /*-- gallery --*/
-.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
-	color: #ffffff;
-    cursor: default;
-    background: #111625;
-    border: solid 2px #111625;
+.tab  .nav-tabs{
+	margin-left: 35%; 
+    border-bottom: 0px solid transparent;
+    margin-bottom:1px;
 }
-.nav-tabs > li > a {
-    margin-right: 3px;
-    font-size: 1em;
-    color: #212121;
-    border: solid 2px #212121;
-    border-radius: 0px;
-	-webkit-border-radius: 0px;
-	-ms-border-radius: 0px;
-	-o-border-radius: 0px;
-	-moz-border-radius: 0px;
-    padding: .5em 1em;
+.tab .nav-tabs > li{
+    padding:0 20px;
 }
-.nav-tabs > li > a:focus{
-	background:transparent;
+.tab .nav-tabs > li a {
+    font-size:14px;
+    color:#808080;
 }
-.nav-tabs {
-    border-bottom: none;
-    margin: 4em 0;
-    text-align: center;
+.tab .nav-tabs > li a:hover,
+.tab .nav-tabs > li.active > a{
+    background:#fff;
+    color: #3498db;
+    padding-bottom:5px;
+    border:1px solid transparent;
+    border-bottom:1px solid #3498db;
 }
-.nav-tabs > li {
-    margin: 0 10px;
-    float: none;
-    display: inline-block;
+.tab .tab-content{
+    color:#5a5c5d;
+    padding: 20px;
 }
-.nav-tabs > li > a:hover {
-    color: #FFFFFF;
-    background: 	1;
-    border: solid 2px #111625;
+@media only screen and (max-width: 480px){
+    .tab .nav-tabs > li{ width:100%; margin-left: 1%}
 }
-.navv-tabs > li.active > a, .navv-tabs > li.active > a:hover, .navv-tabs > li.active > a:focus {
-	color: #ffffff;
-    cursor: default;
-    background: #111625;
-    border: solid 2px #000;
-padding: 10px;
-}
-.navv-tabs > li > a {
-    margin-right: 3px;
-    font-size: 2em;
-    color: #000;
-    border: solid 2px #fff;
-    border-radius: 0px;
-	-webkit-border-radius: 0px;
-	-ms-border-radius: 0px;
-	-o-border-radius: 0px;
-	-moz-border-radius: 0px;
-    padding: .5em 1em;
-}
-.navv-tabs > li > a:focus{
-	background:transparent;
-}
-.navv-tabs {
-    border-bottom: none;
-    margin: 4em 0;
-    text-align: center;
-}
-.navv-tabs > li {
-    margin: 0 10px;
-    float: none;
-    display: inline-block;
-}
-.navv-tabs > li > a:hover {
-    color: #FFFFFF;
-    background: 	1;
-    border: solid 2px #111625;
-}
-.agile-gallery-info{
-    padding: 1em;
-    background: #ffffff;
-    margin-bottom: 1em;
-    border-bottom: solid 2px #e1e1e1;
-}
-.agile-gallery-info h5{
-    color: #000000;
-    font-size: 1em;
-    text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 4px;
-    margin: 0;
-}
-.agile-gallery-info p{
-    color: #999999;
-    font-size: .9em;
-    line-height: 1.8em;
-    margin: .5em 0 0 0;
-}
-.agile-gallery-info{
-	transition: 0.5s all;
-	-webkit-transition: 0.5s all;
-	-o-transition: 0.5s all;
-	-moz-transition: 0.5s all;
-	-ms-transition: 0.5s all;
-}
-.w3_tab_img_left:hover .agile-gallery-info{
-    border-bottom: solid 2px #111625;
-}
-.w3_tab_img_left:hover .agile-gallery-info p{
-    color: #111625;
-}
-/*-- //gallery --*/
+/*--//gallery--*/
 /*-- team --*/
 .team{
 	background: url(../images/bg.jpg) no-repeat 0px 0px;

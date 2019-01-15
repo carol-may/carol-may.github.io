@@ -12,7 +12,47 @@ body {
     color: #2f2f2f;
     font-family: 'Calibri';
 }
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+#Sidenav a {
+  position: fixed;
+  right: -80px;
+  transition: 0.3s;
+  padding: 15px; 
+  top: 50%;
+  width: 115px; /* Set a specific width */
+  text-decoration: none; /* Remove underline */
+  font-size: 20px; /* Increase font size */
+  color: white; /* White text color */
+  border-radius: 30px 0 0 30px; /* Rounded corners on the top right and bottom right side */
+  z-index: 1000;}
 
+#Sidenav a:hover {
+  right: 0; /* On mouse-over, make the elements appear as they should */
+}
+
+/* The about link: 20px from the top with a green background */
+#sid1{
+    margin-top: -90px;
+  background-color: rgba(17, 47, 65, 0.3);
+}
+
+#sid2 {
+    margin-top: -30px;
+  background-color: rgba(17, 47, 65, 0.3);
+}
+
+#sid3 {
+    margin-top: 30px;
+  background-color: rgba(17, 47, 65, 0.3);
+}
+
+#sid4 {
+    margin-top: 95px;
+  background-color: rgba(17, 47, 65, 0.3);
+}
 img {
     vertical-align: baseline;
 }
@@ -212,6 +252,7 @@ a:hover, a:active {
 --------------------------------*/
 .site-navigation {
     position: absolute;
+	margin-left:auto; margin-right:0;
     top: -22px;
     right: 15px;
     z-index: 9999;

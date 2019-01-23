@@ -12,8 +12,10 @@
   display: inline-block;
   font-size: 1.5em;
   list-style-type: none;
+  color: white;
   padding: 1em;
   text-transform: uppercase;
+  background-color: (200,200,200,0.5);
 }
 
 #cd li span {

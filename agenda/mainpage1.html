@@ -1,190 +1,582 @@
 <!DOCTYPE html>
-<html>
-    <head>
-       <!--Import Google Icon Font-->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!--Import materialize.css-->
-  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-  <!--Let browser know website is optimized for mobile-->
-  <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
-  <!--Custom CSS-->
-  <link rel="stylesheet" type="text/css" href="css/navbar.css">
-  <link rel="stylesheet" type="text/css" href="css/misc.css">
-  <link rel="stylesheet" type="text/css" href="css/text_changer.css">
-  <link rel="stylesheet" type="text/css" href="css/gallery.css">
-  <link rel="stylesheet" type="text/css" href="css/animate.css">
-  <link rel="stylesheet" type="text/css" href="css/scrollspy.css">
-  <link rel="stylesheet" type="text/css" href="css/countdown.css">
-  </head>
-   
-  <body style="max-width: 100%;  overflow-x: hidden;">
-      <nav class="z-depth-0" id="navbar" style="position: fixed; z-index: 2; background-color: transparent;">
-          <div class="nav-wrapper container transparent">
-            <!--Hamburger menu icon-->
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-            <!--Logo-->
-            <a href="#!" class="brand-img img">
-              <img src="images/logo.png" height="56px;" width="auto;" style="padding-top: 8px; padding-bottom: 8px;">
-            </a>
-            <!--Menu-->
-            <ul class="right hide-on-med-and-down">
-              <li><a href="#home"><span class="white-text">Home</span></a></li>
-              <li id="event_menu" style="background-color: rgba(49, 27, 146, 0.5);" class="active"><a href="#events"><span class="white-text">Events</span></a></li>
-              <li><a href="#sponsor_us"><span class="white-text">Sponsor Us</span></a></li>
-              <li><a href="#contact_us"><span class="white-text">Contact Us</span></a></li>
-              <li id="login_signup_menu" style="background-color: rgba(25, 118, 210, 0.5);"><a href="#login_signup"><span class="white-text">Login/Sign Up</span></a></li>
-            </ul>
-          </div>
-        </nav>
-        <!--Side navigation bar-->
-        <ul class="sidenav" id="mobile-demo" style="background-color: #212121;">
-          <li><a href="#home"><span class="white-text">Home</span></a></li>
-          <li class="active"><a href="#events"><span class="white-text">Events</span></a></li>
-          <li><a href="#sponsor_us"><span class="white-text">Sponsor Us</span></a></li>
-          <li><a href="#contact_us"><span class="white-text">Contact Us</span></a></li>
-          <li style="background-color: #1976d2;"><a href="#login_signup"><span class="white-text">Login/Sign Up</span></a></li>
-        </ul>
-        <!--end-->
-  <div id="home" class="parallax-container" style="background-image: url(images/front_background_1.jpg); height: 100vh; z-index: 1;">
-    <div class="left valign-wrapper" style="height: 100%;">
-    <div id = "cd">
-    <ul>
-      <li><span id="days"></span>days</li>
-      <li><span id="hours"></span>Hours</li>
-      <li><span id="minutes"></span>Minutes</li>
-      <li><span id="seconds"></span>Seconds</li>
-    </ul>
-    <br>
-    <h1 class="white-text">ELIXIR 19 IS HERE!!!!!!</h1>
-   </div>
-   </div>
- </div>
- <div class ="container">
- <div class="row">
-  <br><div class="col s12 m4 l3"><img src="images/logo.png" style="height:100%; object-fit: contain; width:100%; padding-top: 3em; padding-bottom: 8px;"></div>
-  
-   <center>
-  <div class="col s12 m8 l9"><h2>What is elixir?</h2><br><h5>i had to fill this and felt like writing lyrics to a song i like lol!!!! 
-    <br> <blockquote>pain, oh let the bullets fly, oh let them rain. My life my love my run(??)</blockquote><br> Do you ever feel, like a plastic bag??</h5><br>
-    <div class="col s12 m6 l3 offset-l2"><p><a class="waves-effect waves-light btn">cuck</a></p></div>
-    <div class="col s12 m6 l3  offset-l2"><p><a class="waves-effect waves-light btn">know more</a></p></div></div>
-</div>
-</center>
-</div>
+<html lang="en">
+<head>
+    <title>Hello World</title>
 
-<div id="events" style="background-image:url(images/featured-events-bg.jpg); background-size: 100% 100%;">
-   
-  <div class="row">
-      <div class="col s12">
-        <ul class="tabs">
-          <li class="tab col s3"><a class="active" href="#test1">Test 1</a></li>
-          <li class="tab col s3"><a href="#test2">Test 2</a></li>
-          <li class="tab col s3"><a href="#test3">Test 3</a></li>
-          <li class="tab col s3"><a href="#test4">Test 4</a></li>
-        </ul>
-      </div>
-      <div id="test1" class="col s12"><div class="row" style = "padding-top: 4em";>
-        <div class="col s6 m4 l4">
-          <div class="card">
-            <div class="card-image waves-effect waves-block waves-light">
-              <img class="activator" src="images/tile1.jpg">
-            </div>
-            <div class="card-content">
-              <span class="card-title activator grey-text text-darken-4">Just Dance<i class="material-icons right">more_vert</i></span>
-              <p><a href="#">Know More</a></p>
-            </div>
-            <div class="card-reveal">
-              <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-              <p>lalalalalala</p>
-            </div>
-          </div>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="css/swiper.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    <script src="js/custom.js"></script>
+</head>
+<body>
+<header class="site-header">
+    <div class="header-bar">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-10 col-lg-2 order-1 order-lg-1">
+                    <div class="site-branding">
+                        <div class="site-title">
+                            <a href="#"><img src="images/logo.png" alt="logo"></a>
+                        </div><!-- .site-title -->
+                    </div><!-- .site-branding -->
+                </div><!-- .col -->
+
+                <div class="col-6 col-lg-10 order-2 order-lg-1">
+                    <nav class="site-navigation">
+                        <div class="hamburger-menu d-lg-none">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div><!-- .hamburger-menu -->
+
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Events</a></li>
+                            <li><a href="#">News</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </nav><!-- .site-navigation -->
+                </div><!-- .col -->
+
+               
+            </div><!-- .row -->
+        </div><!-- .container-fluid -->
+    </div><!-- .header-bar -->
+    <div id="Sidenav" class="sidenav">
+		<a href="#mail" id="sid1">About</a>
+		<a href="#indro" id="sid2">Events</a>
+		<a href="#about" id="sid3">Venues</a>
+		<a href="#events" id="sid4">Special Guests</a>
+	  </div>
+    <div class="swiper-container hero-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" data-date="2018/05/01" style="background: url('images/header-bg.jpg') no-repeat">
+                <div class="hero-content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col flex flex-column justify-content-center">
+                                <div class="entry-header">
+                                    <div class="countdown flex align-items-center">
+                                        <div class="countdown-holder flex align-items-baseline">
+                                            <span class="dday"></span>
+                                            <label>Days</label>
+                                        </div><!-- .countdown-holder -->
+
+                                        <div class="countdown-holder flex align-items-baseline">
+                                            <span class="dhour"></span>
+                                            <label>Hours</label>
+                                        </div><!-- .countdown-holder -->
+
+                                        <div class="countdown-holder flex align-items-baseline">
+                                            <span class="dmin"></span>
+                                            <label>Minutes</label>
+                                        </div><!-- .countdown-holder -->
+
+                                        <div class="countdown-holder flex align-items-baseline">
+                                            <span class="dsec"></span>
+                                            <label>Seconds</label>
+                                        </div><!-- .countdown-holder -->
+                                    </div><!-- .countdown -->
+
+                                    <h2 class="entry-title">Elixir '19 <br> The fest you all have been waiting for!</h2>
+                                </div><!--- .entry-header -->
+
+                                <div class="entry-footer">
+                                    <a class="btn gradient-bg" href="#">Order here</a>
+                                </div><!-- .entry-footer" -->
+                            </div><!-- .col -->
+                        </div><!-- .container -->
+                    </div><!-- .hero-content -->
+                </div><!-- .swiper-slide -->
+            </div><!-- .swiper-wrapper -->
+
+            <div class="swiper-slide" data-date="2019/05/01" style="background: url('images/header-bg.jpg') no-repeat">
+                <div class="hero-content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col flex flex-column justify-content-center">
+                                <div class="entry-header">
+                                  
+
+                                    <h2 class="entry-title">enter text abt events?? <br>lala</h2>
+                                </div><!--- .entry-header -->
+
+                                <div class="entry-footer">
+                                    <a class="btn gradient-bg" href="#">check out events</a>
+                                </div><!-- .entry-footer" -->
+                            </div><!-- .col -->
+                        </div><!-- .container -->
+                    </div><!-- .hero-content -->
+                </div><!-- .swiper-slide -->
+            </div><!-- .swiper-wrapper -->
+
+            <div class="swiper-slide" data-date="2020/05/01" style="background: url('images/header-bg.jpg') no-repeat">
+                <div class="hero-content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col flex flex-column justify-content-center">
+                                <div class="entry-header">
+
+                                    <h2 class="entry-title">i believe i can fly <br>i believe i can touch the sky<br> ?????!!!! :D </h2>
+                                </div><!--- .entry-header -->
+
+                                <div class="entry-footer">
+                                    <a class="btn gradient-bg" href="#">day and night   </a>
+                                </div><!-- .entry-footer" -->
+                            </div><!-- .col -->
+                        </div><!-- .container -->
+                    </div><!-- .hero-content -->
+                </div><!-- .swiper-slide -->
+            </div><!-- .swiper-wrapper -->
         </div>
-      
-        <div class="col s6 m4 l4">
-          <div class="card">
-            <div class="card-image waves-effect waves-block waves-light">
-              <img class="activator" src="images/tile1.jpg">
-            </div>
-            <div class="card-content">
-              <span class="card-title activator grey-text text-darken-4">Just Dance<i class="material-icons right">more_vert</i></span>
-              <p><a href="#">Know More</a></p>
-            </div>
-            <div class="card-reveal">
-              <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-              <p>lalalalalala</p>
-            </div>
-          </div>
-        </div> <div class="col s6 m4 l4">
-          <div class="card">
-            <div class="card-image waves-effect waves-block waves-light">
-              <img class="activator" src="images/tile1.jpg">
-            </div>
-            <div class="card-content">
-              <span class="card-title activator grey-text text-darken-4">Just Dance<i class="material-icons right">more_vert</i></span>
-              <p><a href="#">Know More</a></p>
-            </div>
-            <div class="card-reveal">
-              <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-              <p>lalalalalala</p>
-            </div>
-          </div>
+
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- Add Arrows -->
+        <div class="swiper-button-next flex justify-content-center align-items-center">
+            <span><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1171 960q0 13-10 23l-466 466q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l393-393-393-393q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l466 466q10 10 10 23z"/></svg></span>
         </div>
-      </div></div>
 
-
-      <div id="test2" class="col s12"> <div class="row" style = "padding-top: 4em;";></div>
-        <div class="col s6 m4 offset-m2 l4 offset-l2">
-        <div class="card">
-          <div class="card-image waves-effect waves-block waves-light">
-            <img class="activator" src="images/tile1.jpg">
-          </div>
-          <div class="card-content">
-            <span class="card-title activator grey-text text-darken-4">Just Dance<i class="material-icons right">more_vert</i></span>
-            <p><a href="#">Know More</a></p>
-          </div>
-          <div class="card-reveal">
-            <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-            <p>lalalalalala</p>
-          </div>
+        <div class="swiper-button-prev flex justify-content-center align-items-center">
+            <span><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1203 544q0 13-10 23l-393 393 393 393q10 10 10 23t-10 23l-50 50q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l50 50q10 10 10 23z"/></svg></span>
         </div>
-      </div>
-    
-      <div class="col s6 m4 l4">
-        <div class="card">
-          <div class="card-image waves-effect waves-block waves-light">
-            <img class="activator" src="images/tile1.jpg">
-          </div>
-          <div class="card-content">
-            <span class="card-title activator grey-text text-darken-4">Just Dance<i class="material-icons right">more_vert</i></span>
-            <p><a href="#">Know More</a></p>
-          </div>
-          <div class="card-reveal">
-            <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-            <p>lalalalalala</p>
-          </div>
-        </div></div>
+    </div><!-- .swiper-container -->
+</header><!-- .site-header -->
 
-      <div id="test3" class="col s12">Test 3</div>
-      <div id="test4" class="col s12">Test 4</div>
+<div class="homepage-info-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-4 col-lg-5">
+                <figure>
+                    <img src="images/logo.png" alt="logo">
+                </figure>
+            </div>
+
+            <div class="col-12 col-md-8 col-lg-7">
+                <header class="entry-header">
+                    <h2 class="entry-title">What is Elixir all about?</h2>
+                </header>
+
+                <div class="entry-content">
+                    <p>Vestibulum eget lacus at mauris sagittis varius. Etiam ut venenatis dui. Nullam tellus risus, pellentesque at facilisis et, scelerisque sit amet metus. Duis vel semper turpis, ac tempus libero. Maecenas id ultrices risus. Aenean nec ornare ipsum, lacinia volutpat urna. Maecenas ut aliquam purus, quis sodales dolor.</p>
+                </div>
+
+                <footer class="entry-footer">
+                    <a href="#" class="btn gradient-bg">Read More</a>
+                    <a href="#" class="btn dark">Register Now</a>
+                </footer>
+            </div>
+        </div>
     </div>
 </div>
 
-<br> <h1>&zwnj;</h1>
-<br> <h1>&zwnj;</h1>
+<div class="homepage-featured-events homepage-regional-events">
+    <div class="container">
+            <div class="select-location" align = "right">
+                    <select>
+                        <option>All
+                        </option>
+                        <option>Dance</option>
+                    </select>
+                </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="featured-events-wrap flex flex-wrap justify-content-between">
+                    <div class="event-content-wrap positioning-event-1">
+
+                            
+                            </header>
+            
+                        <figure>
+                            <a href="#"><img src="images/1.jpg" alt="1"></a>
+                        </figure>
+
+                        <header class="entry-header">
+                            <h3 class="entry-title">Rhapsody</h3>
+
+                            <div class="posted-date">Elixir '16</div>
+                        </header>
+                    </div>
+
+                    <div class="event-content-wrap positioning-event-2">
+                        <figure>
+                            <a href="#"><img src="images/2.jpg" alt=""></a>
+                        </figure>
+
+                        <header class="entry-header">
+                            <h3 class="entry-title">Fashionista</h3>
+
+                            <div class="posted-date">Elixir '16</div>
+                        </header>
+                    </div>
+
+                    <div class="event-content-wrap positioning-event-3">
+                        <figure>
+                            <a href="#"><img src="images/3.jpg" alt=""></a>
+                        </figure>
+
+                        <header class="entry-header">
+                            <h3 class="entry-title">[event name]</h3>
+
+                            <div class="posted-date">Elixir '16</div>
+                        </header>
+                    </div>
+
+                  
+
+                    <div class="event-content-wrap positioning-event-7">
+                          
+                        <figure>
+                            <a href="https://carol-may.github.io/index.html"><img src="images/90.jpg" alt=""></a>
+                        </figure>
+
+                        <header class="entry-header">
+                           <a href="url"> <h3 class="entry-title">Rock o Calypse</h3>
+
+                            <div class="posted-date">Elixir '16</div>
+                        </header>
+                    </div>
+
+                    <div class="event-content-wrap positioning-event-8">
+                        <figure>
+                            <a href="#"><img src="images/modern.jpg" alt="1"></a>
+                        </figure>
+
+                        <header class="entry-header">
+                            <h3 class="entry-title">[event name]</h3>
+
+                            <div class="posted-date">Elixir '16</div>
+                        </header>
+                    </div>
+
+                    <div class="event-content-wrap positioning-event-9">
+                        <figure>
+                            <a href="#"><img src="images/smoke.jpg" alt=""></a>
+                        </figure>
+
+                        <header class="entry-header">
+                            <h3 class="entry-title">[enter event]</h3>
+
+                            <div class="posted-date">Elixir '16</div>
+                        </header>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-  
- <script type="text/javascript" src="js/materialize.min.js"></script>
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
- <script type = "text/javascript">
- M.AutoInit();
-   </script>
-    <script type="text/javascript" src="js/smooth_scroll.js"></script>
-    <script type="text/javascript" src="js/gallery.js"></script>
-    <script type="text/javascript" src="js/SmoothScroll.min.js"></script>
-    <script type="text/javascript" src="js/wow.min.js"></script>
-    <script type="text/javascript" src="js/countdown.js"></script>
-    <script>
-    new WOW().init();
-    </script>
-    </body>
-  </html>
+
+<div class="homepage-next-events">
+    <div class="container">
+        <div class="row">
+            <div class="next-events-section-header">
+                <h2 class="entry-title">Venues</h2>
+                <p>Vestibulum eget lacus at mauris sagittis varius. Etiam ut venenatis dui. Nullam tellus risus, pellentesque at facilisis et, scelerisque sit amet metus. Duis vel semper turpis, ac tempus libero. Maecenas id ultrices risus. Aenean nec ornare ipsum, lacinia.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="next-event-wrap">
+                    <figure>
+                        <a href="#"><img src="images/next1.jpg" alt="1"></a>
+
+                        <div class="event-rating">1st Day</div>
+                    </figure>
+
+                    <header class="entry-header">
+                        <h3 class="entry-title">College campus</h3>
+
+                        <div class="posted-date">[week] <span>[date]</span></div>
+                    </header>
+
+                    <div class="entry-content">
+                        <p>Vestibulum eget lacus at mauris sagittis varius. Etiam ut venenatis dui. Nullam tellus risus.</p>
+                    </div>
+
+                    <footer class="entry-footer">
+                        <a href="#">college website</a>
+                    </footer>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="next-event-wrap">
+                    <figure>
+                        <a href="#"><img src="images/next1.jpg" alt="1"></a>
+
+                        <div class="event-rating">2nd day</div>
+                    </figure>
+
+                    <header class="entry-header">
+                        <h3 class="entry-title">City centre 2</h3>
+
+                        <div class="posted-date">week <span>date</span></div>
+                    </header>
+
+                    <div class="entry-content">
+                        <p>Eget lacus at mauris sagittis varius. Etiam ut ven enatis dui. Nullam tellus risus, pellentesque.</p>
+                    </div>
+
+                    <footer class="entry-footer">
+                        <a href="#">checc outt</a>
+                    </footer>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="next-event-wrap">
+                    <figure>
+                        <a href="#"><img src="images/next1.jpg" alt="1"></a>
+
+                        <div class="event-rating">?? Day</div>
+                    </figure>
+
+                    <header class="entry-header">
+                        <h3 class="entry-title">manch</h3>
+
+                        <div class="posted-date">week <span>day</span></div>
+                    </header>
+
+                    <div class="entry-content">
+                        <p>Lacus at mauris sagittis varius. Etiam ut venenatis dui. Nullam tellus risus, pellentesque at facili.</p>
+                    </div>
+
+                    <footer class="entry-footer">
+                        <a href="#">checc</a>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="homepage-regional-events">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <header class="regional-events-heading entry-header flex flex-wrap justify-content-between align-items-center">
+                    <h2 class="entry-title">Special Guests</h2>
+
+                    <div class="select-location">
+                        <select>
+                            <option>Elixir '19
+                            </option>
+                            <option>Elixir '16</option>
+                        </select>
+                    </div>
+                </header>
+
+                <div class="swiper-container homepage-regional-events-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <figure>
+                                <img src="images/event-slider-1.jpg" alt="">
+
+                                <a class="event-overlay-link flex justify-content-center align-items-center" href="#">+</a>
+                            </figure><!-- .hero-image -->
+
+                            <div class="entry-header">
+                                <h2 class="entry-title">name </h2>
+                            </div><!--- .entry-header -->
+
+                            <div class="entry-footer">
+                                <div class="posted-date">desc <span>more desc</span></div>
+                            </div><!-- .entry-footer" -->
+                        </div><!-- .swiper-slide -->
+
+                        <div class="swiper-slide">
+                            <figure>
+                                <img src="images/event-slider-2.jpg" alt="">
+
+                                <a class="event-overlay-link flex justify-content-center align-items-center" href="#">+</a>
+                            </figure><!-- .hero-image -->
+
+                            <div class="entry-header">
+                                <h2 class="entry-title">namm </h2>
+                            </div><!--- .entry-header -->
+
+                            <div class="entry-footer">
+                                <div class="posted-date">desc <span>desc</span></div>
+                            </div><!-- .entry-footer" -->
+                        </div><!-- .swiper-slide -->
+
+                        <div class="swiper-slide">
+                            <figure>
+                                <img src="images/event-slider-3.jpg" alt="">
+
+                                <a class="event-overlay-link flex justify-content-center align-items-center" href="#">+</a>
+                            </figure><!-- .hero-image -->
+
+                            <div class="entry-header">
+                                <h2 class="entry-title">namm</h2>
+                            </div><!--- .entry-header -->
+
+                            <div class="entry-footer">
+                                <div class="posted-date">desc <span>desc</span></div>
+                            </div><!-- .entry-footer" -->
+                        </div><!-- .swiper-slide -->
+
+                        <div class="swiper-slide">
+                            <figure>
+                                <img src="images/event-slider-4.jpg" alt="">
+
+                                <a class="event-overlay-link flex justify-content-center align-items-center" href="#">+</a>
+                            </figure><!-- .hero-image -->
+
+                            <div class="entry-header">
+                                <h2 class="entry-title">nam</h2>
+                            </div><!--- .entry-header -->
+
+                            <div class="entry-footer">
+                                <div class="posted-date">desc <span>....</span></div>
+                            </div><!-- .entry-footer" -->
+                        </div><!-- .swiper-slide -->
+
+
+
+                        <div class="swiper-slide">
+                            <figure>
+                                <img src="images/event-slider-1.jpg" alt="">
+
+                                <a class="event-overlay-link flex justify-content-center align-items-center" href="#">+</a>
+                            </figure><!-- .hero-image -->
+
+                            <div class="entry-header">
+                                <h2 class="entry-title">nam </h2>
+                            </div><!--- .entry-header -->
+
+                            <div class="entry-footer">
+                                <div class="posted-date">desc <span>...</span></div>
+                            </div><!-- .entry-footer" -->
+                        </div><!-- .swiper-slide -->
+                    </div><!-- .swiper-wrapper -->
+
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next flex justify-content-center align-items-center">
+                        <span><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1171 960q0 13-10 23l-466 466q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l393-393-393-393q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l466 466q10 10 10 23z"/></svg></span>
+                    </div>
+
+                    <div class="swiper-button-prev flex justify-content-center align-items-center">
+                        <span><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1203 544q0 13-10 23l-393 393 393 393q10 10 10 23t-10 23l-50 50q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l50 50q10 10 10 23z"/></svg></span>
+                    </div>
+                </div><!-- .swiper-container -->
+
+                <div class="events-partners">
+                    <header class="entry-header">
+                        <h2 class="entry-title">Partners</h2>
+                    </header>
+
+                    <div class="events-partners-logos flex flex-wrap justify-content-between align-items-center">
+                        <div class="event-partner-logo">
+                            <a href="#"><img src="images/pixar.png" alt=""></a>
+                        </div>
+
+                        <div class="event-partner-logo">
+                            <a href="#"><img src="images/the-pirate.png" alt=""></a>
+                        </div>
+
+                        <div class="event-partner-logo">
+                            <a href="#"><img src="images/himalayas.png" alt=""></a>
+                        </div>
+
+                        <div class="event-partner-logo">
+                            <a href="#"><img src="images/sa.png" alt=""></a>
+                        </div>
+
+                        <div class="event-partner-logo">
+                            <a href="#"><img src="images/south-porth.png" alt=""></a>
+                        </div>
+
+                        <div class="event-partner-logo">
+                            <a href="#"><img src="images/himalayas.png" alt=""></a>
+                        </div>
+
+                        <div class="event-partner-logo">
+                            <a href="#"><img src="images/sa.png" alt=""></a>
+                        </div>
+
+                        <div class="event-partner-logo">
+                            <a href="#"><img src="images/south-porth.png" alt=""></a>
+                        </div>
+
+                        <div class="event-partner-logo">
+                            <a href="#"><img src="images/pixar.png" alt=""></a>
+                        </div>
+
+                        <div class="event-partner-logo">
+                            <a href="#"><img src="images/the-pirate.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <figure class="footer-logo">
+                    <a href="#"><img src="images/logo.png" alt="logo"></a>
+                </figure>
+
+                <nav class="footer-navigation">
+                    <ul class="flex flex-wrap justify-content-center align-items-center">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+
+                <div class="footer-social">
+                    <ul class="flex flex-wrap justify-content-center align-items-center">
+                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="back-to-top flex justify-content-center align-items-center">
+    <span><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1395 1184q0 13-10 23l-50 50q-10 10-23 10t-23-10l-393-393-393 393q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l466 466q10 10 10 23z"/></svg></span>
+</div>
+
+<script type='text/javascript' src='js/jquery.js'></script>
+<script type='text/javascript' src='js/masonry.pkgd.min.js'></script>
+<script type='text/javascript' src='js/jquery.collapsible.min.js'></script>
+<script type='text/javascript' src='js/swiper.min.js'></script>
+<script type='text/javascript' src='js/jquery.countdown.min.js'></script>
+<script type='text/javascript' src='js/circle-progress.min.js'></script>
+<script type='text/javascript' src='js/jquery.countTo.min.js'></script>
+<script type='text/javascript' src='js/custom.js'></script>
+
+</body>
+</html>

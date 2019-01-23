@@ -1,6 +1,0 @@
-.short-text { display: none; }
-
-@media (max-height: 500px) {
-    .short-text { display: inline-block; }
-    .full-text { display: none; }
-}

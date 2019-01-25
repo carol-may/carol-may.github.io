@@ -2,24 +2,19 @@
 var data = [
     {
         name: 'Mr. X',
-        phone: '12345',
+        phone: '+918777023592',
         image: 'images/c1.jpeg'
     }, {
         name: 'Mr. Y',
-        phone: '123456',
+        phone: '+919933442009',
         image: 'images/c2.jpeg'
     }, {
         name: 'Mr. Z',
-        phone: '2468',
+        phone: '+917585952009',
         image: 'images/c3.jpeg'
     }
 ]
 for(var x = 0; x < data.length; x++) {
-    var img = document.createElement('img')
-    img.width = '156px;'
-    img.src = data[x].image
-    img.className = 'circle responsive-img'
-
     var ul = document.createElement('ul')
     ul.style = 'text-align: center;'
 
@@ -30,9 +25,9 @@ for(var x = 0; x < data.length; x++) {
     a.className = 'white-text valign-wrapper'
     var i = document.createElement('i')
     i.className = 'material-icons prefix'
-    i.innerHTML = 'person'
+    i.innerText = 'person'
     a.appendChild(i)
-    a.innerHTML = '&nbsp;' + data[x].name
+    a.innerHTML += '&nbsp;' + data[x].name
     h6.appendChild(a)
     li.appendChild(h6)
     ul.appendChild(li)
@@ -46,9 +41,9 @@ for(var x = 0; x < data.length; x++) {
     a2.className = 'white-text valign-wrapper'
     var i2 = document.createElement('i')
     i2.className = 'material-icons prefix'
-    i2.innerHTML = 'phone'
+    i2.innerText = 'phone'
     a2.appendChild(i2)
-    a2.innerHTML = '&nbsp;' + data[x].phone
+    a2.innerHTML += '&nbsp;' + data[x].phone
     h62.appendChild(a2)
     li2.appendChild(h62)
     ul.appendChild(li2)
@@ -56,6 +51,11 @@ for(var x = 0; x < data.length; x++) {
     var a3 = document.createElement('a')
     a3.className = 'waves-effect waves-light btn deep-purple darken-4'
     a3.innerHTML = 'WHATSAPP'
+    a3.href = '#'
+
+    var img = document.createElement('img')
+    img.src = data[x].image
+    img.className = 'circle responsive-img'
     
     var center = document.createElement('center')
     center.appendChild(img)
@@ -63,8 +63,8 @@ for(var x = 0; x < data.length; x++) {
     center.appendChild(a3)
 
     var card = document.createElement('div')
-    card.className = 'wow card hoverable valign-wrapper'
-    card.style = 'background-color: rgba(17, 22, 37, 1)'
+    card.className = 'card hoverable large'
+    card.style = 'background-color: rgba(17, 22, 37, 1);' 
 
     var card_content = document.createElement('div')
     card_content.className = 'card-content'

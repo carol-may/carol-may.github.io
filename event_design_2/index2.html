@@ -160,6 +160,8 @@
         <div style="height: 2px; width: 100px; background-color: white; margin: 56px;"></div>
       </center>
       <div class="carousel" style="height: 500px;" id="organizer">
+        <div class="btn-floating btn-large waves-effect waves-light prev"><i class="material-icons">arrow_back</i></div>
+        <div class="btn-floating btn-large waves-effect waves-light next"><i class="material-icons">arrow_forward</i></div>
       </div>
     </div>
   </div>
@@ -193,9 +195,9 @@
             <li><a class="white-text valign-wrapper"><i class="material-icons prefix">email</i>&emsp;mail@example.com</a></li>
           </ul>
         </div>
-        <!-- <div class="col s12 m6 l6">
+        <div class="col s12 m6 l6">
           <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Felixir2k19%2F&tabs=timeline&width=300&height=300&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="300" height="300" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
-        </div> -->
+        </div>
       </div>
     </div>
     <div class="footer-copyright">
@@ -205,8 +207,8 @@
     </div>
   </footer>
   <!--JavaScript at end of body for optimized loading-->
-  <script type="text/javascript" src="js/materialize.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
   <script type="text/javascript">
   $(document).ready(function() {
     //Init Materialize variables
@@ -231,6 +233,18 @@
         $("#login_signup_menu").css("background-color", "#1976D280");
       }
     });
+
+    $('.carousel').carousel();
+    $('.prev').click(function(e) {
+      e.preventDefault()
+      e.stopPropagation()
+      $('.carousel').carousel('prev');
+    })
+    $('.next').click(function(e) {
+      e.preventDefault()
+      e.stopPropagation()
+      $('.carousel').carousel('next');
+    })
   });
 </script>
 <script type="text/javascript" src="js/smooth_scroll.js"></script>
@@ -255,6 +269,6 @@ var carouselFunction = function showNext() {
 }
 setInterval(carouselFunction, 5000);
 </script>
-<script src="js/data.js"></script>
+<script src="js/data.js"></script>  
 </body>
 </html>

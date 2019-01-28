@@ -148,7 +148,7 @@ $.ajax({
     crossDomain: true,
     crossOrigin: true,
     dataType: 'json',
-    url: 'http://elixir-backend.ddns.net/get_events/events/?format=json',
+    url: 'https://elixir-backend.ddns.net/get_events/events/?format=json',
     method: 'GET',
     headers: {
         // 'Origin': 'http://elixir-backend.ddns.net/',

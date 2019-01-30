@@ -1,23 +1,3 @@
-//fetch from api 
-// var data = [
-//     {
-//         name: 'Mr. X',
-//         phone_number: '+918777023592',
-//         profile_pic_url: 'images/c1.jpeg',
-//         volunteer_type: 'co-ordinator'
-//     }, {
-//         name: 'Mr. Y',
-//         phone_number: '+919933442009',
-//         profile_pic_url: 'images/c2.jpeg',
-//         volunteer_type: 'volunteer'
-//     }, {
-//         name: 'Mr. Z',
-//         phone_number: '+917585952009',
-//         profile_pic_url: 'images/c3.jpeg',
-//         volunteer_type: 'co-ordinator'
-//     }
-// ]
-
 function parallax_carousel(images) {
     var imgs = ["images/front_background_1.jpg", "images/front_background_2.jpg"];
     imgs.push(images)
@@ -49,7 +29,7 @@ function createVolunteers(data) {
 
         var li = document.createElement('li')
         li.style = 'display: inline-block;'
-        var h6 = document.createElement('h6')
+        var h6 = document.createElement('h5')
         var a = document.createElement('a')
         a.className = 'white-text valign-wrapper'
         var i = document.createElement('i')
@@ -63,7 +43,7 @@ function createVolunteers(data) {
 
         var li1 = document.createElement('li')
         li1.style = 'display: inline-block;'
-        var h61 = document.createElement('h6')
+        var h61 = document.createElement('h5')
         var a1 = document.createElement('a')
         a1.className = 'white-text valign-wrapper'
         var i1 = document.createElement('i')
@@ -80,7 +60,7 @@ function createVolunteers(data) {
 
             var li2 = document.createElement('li')
             li2.style = 'display: inline-block;'
-            var h62 = document.createElement('h6')
+            var h62 = document.createElement('h5')
             var a2 = document.createElement('a')
             a2.className = 'white-text valign-wrapper'
             var i2 = document.createElement('i')
@@ -93,21 +73,21 @@ function createVolunteers(data) {
             ul.appendChild(li2)
 
             ul.appendChild(document.createElement('br'))
-            
-            var li3 = document.createElement('li')
-            li3.style = 'display: inline-block;'
-            var a3 = document.createElement('a')
-            a3.className = 'waves-effect waves-light btn deep-purple darken-4 valign-wrapper'
-            a3.innerHTML = 'WHATSAPP'
-            a3.href = '#'
-            li3.appendChild(a3)
-            ul.appendChild(li3)
+            //activate this if you have a better idea
+            // var li3 = document.createElement('li')
+            // li3.style = 'display: inline-block;'
+            // var a3 = document.createElement('a')
+            // a3.className = 'waves-effect waves-light btn deep-purple darken-4 valign-wrapper'
+            // a3.innerHTML = 'WHATSAPP'
+            // a3.href = 'https://api.whatsapp.com/send?phone=918777023592'
+            // li3.appendChild(a3)
+            // ul.appendChild(li3)
         }
 
         center.appendChild(ul)
 
         var card = document.createElement('div')
-        card.className = 'card hoverable'
+        card.className = 'card hoverable medium'
         card.style = 'background-color: rgba(17, 22, 37, 1);' 
 
         var card_content = document.createElement('div')
@@ -119,7 +99,7 @@ function createVolunteers(data) {
 
         var item = document.createElement('div')
         item.className = 'carousel-item'
-        item.style = 'height: 100%;'
+        item.style = 'height: 100%; width: 300px;'
         item.appendChild(card)
 
         document.getElementById('organizer').appendChild(item)
@@ -140,29 +120,39 @@ function createVolunteers(data) {
     }
 }
 
-showdown.setFlavor('github')
-var converter = new showdown.Converter()
+function responsiveness() {
+    tables = document.getElementsByTagName('table')
+    for(var i = 0; i < tables.length; i++)
+        tables[i].className = 'centered responsive-table'
+}
 
-$.ajax({
-    async: true,
-    crossDomain: true,
-    crossOrigin: true,
-    dataType: 'json',
-    url: 'https://elixir-backend.ddns.net/get_events/events/?format=json',
-    method: 'GET',
-    headers: {
-        // 'Origin': 'http://elixir-backend.ddns.net/',
-        // 'Access-Control-Request-Headers': 'origin, x-requested-with',
-        // 'Access-Control-Request-Method': 'GET'
-    },
-    success: function(data) {
-        createVolunteers(data[0].volunteers)
-        $('.event').html(data[0].name)
-        parallax_carousel(data[0].event_pic_url)
-        $('#introduction-text').html(converter.makeHtml(data[0].event_description))
-        $('#rules').html(converter.makeHtml(data[0].rules))
-        $('#timeline').html(converter.makeHtml(data[0].event_timeline))
-        $('#prizes').html(converter.makeHtml(data[0].prizes))
-        $('#faq').html(converter.makeHtml(data[0].faq))
-    }
-})
+function driver(id) {
+    showdown.setFlavor('github')
+    var converter = new showdown.Converter()
+
+    $.ajax({
+        async: true,
+        crossDomain: true,
+        crossOrigin: true,
+        dataType: 'json',
+        url: 'https://elixir-backend.ddns.net/get_events/events/'+ id + '/?format=json',
+        method: 'GET',
+        headers: {
+            // 'Origin': 'http://elixir-backend.ddns.net/',
+            // 'Access-Control-Request-Headers': 'origin, x-requested-with',
+            // 'Access-Control-Request-Method': 'GET'
+        },
+        success: function(data) {
+            createVolunteers(data.volunteers)
+            $('.event').html(data.name)
+            parallax_carousel(data.event_pic_url)
+            $('#introduction-text').html(data.event_description)
+            $('#rules').html(converter.makeHtml(data.rules))
+            $('#timeline').html(converter.makeHtml(data.event_timeline))
+            $('#prizes').html(converter.makeHtml(data.prizes))
+            $('#faq').html(converter.makeHtml(data.faq))
+            responsiveness()
+            // console.log(converter.makeHtml(data[0].rules))
+        }
+    })
+}

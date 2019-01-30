@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!--Custom CSS-->
+  <link rel="stylesheet" type="text/css" href="css/navbar.css">
+  <link rel="stylesheet" type="text/css" href="css/misc.css">
+  <link rel="stylesheet" type="text/css" href="css/text_changer.css">
+  <link rel="stylesheet" type="text/css" href="css/gallery.css">
+  <link rel="stylesheet" type="text/css" href="css/animate.css">
+  <link rel="stylesheet" type="text/css" href="css/scrollspy.css">
+</head>
+<body>
+  <!--Navigation bar-->
+  <nav class="z-depth-0" id="navbar" style="position: fixed; z-index: 2; background-color: transparent;">
+    <div class="nav-wrapper container transparent">
+      <!--Hamburger menu icon-->
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <!--Logo-->
+      <a href="#!" class="brand-img img">
+        <img src="images/logo.png" height="56px;" width="auto;" style="padding-top: 8px; padding-bottom: 8px;">
+      </a>
+      <!--Menu-->
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#home"><span class="white-text">Home</span></a></li>
+        <li id="event_menu" style="background-color: rgba(49, 27, 146, 0.5);" class="active"><a href="#events"><span class="white-text">Events</span></a></li>
+        <li><a href="#sponsor_us"><span class="white-text">Sponsor Us</span></a></li>
+        <li><a href="#contact_us"><span class="white-text">Contact Us</span></a></li>
+        <li id="login_signup_menu" style="background-color: rgba(25, 118, 210, 0.5);"><a href="#login_signup"><span class="white-text">Login/Sign Up</span></a></li>
+      </ul>
+    </div>
+  </nav>
+  <!--Side navigation bar-->
+  <ul class="sidenav" id="mobile-demo" style="background-color: #212121;">
+    <li><a href="#home"><span class="white-text">Home</span></a></li>
+    <li class="active"><a href="#events"><span class="white-text">Events</span></a></li>
+    <li><a href="#sponsor_us"><span class="white-text">Sponsor Us</span></a></li>
+    <li><a href="#contact_us"><span class="white-text">Contact Us</span></a></li>
+    <li style="background-color: #1976d2;"><a href="#login_signup"><span class="white-text">Login/Sign Up</span></a></li>
+  </ul>
+  <!--End of navigation bar-->
+  <!--Parallax background-->
+  <div id="home" class="parallax-container" style="height: 100vh; z-index: 1;">
+    <div class="center valign-wrapper" style="height: 100%; background: rgba(0, 0, 0, 0.5);">
+      <div class="row">
+        <div class="event_name" style="margin-top: 8vmin;">
+          <b>
+            <span class="full-text white-text event"></span>
+            <span class="short-text white-text event"></span>
+          </b>
+        </div>
+        <a href="#introduction" class="btn-floating btn-large pulse waves-effect waves-light deep-purple darken-4" style="margin-top: 8vmin;"><i class="material-icons">keyboard_arrow_down</i></a>
+      </div>
+    </div>
+    <div class="parallax">
+      <img id="carousel_img" src="images/front_background_1.jpg">
+    </div>
+  </div>
+  <!--Introduction-->
+  <div id="introduction" style="background-color: rgba(20, 18, 22, 1)">
+    <div class="container" style="padding-top: 56px; padding-bottom: 56px;">
+      <center>
+        <b><span class="white-text" style="font-size: 36px;">INTRODUCTION</span></b>
+        <div style="height: 2px; width: 100px; background-color: white; margin: 56px;"></div>
+        <blockquote>
+          <span class="white-text" id="introduction-text" style="opacity: 0.75; font-size: 18px;"></span>
+        </blockquote>
+        <br>
+        <a href="#details" class="btn-floating btn-large pulse waves-effect waves-light deep-purple darken-4" style="margin-top: 8vmin;"><i class="material-icons">keyboard_arrow_down</i></a>
+      </center>
+    </div>
+  </div>
+  <div id="details" style="background-color: rgba(17, 22, 37, 1)">
+    <div class="container" style="padding-top: 56px; padding-bottom: 56px;">
+      <center>
+        <b><span class="white-text" style="font-size: 36px;">DETAILS</span></b>
+        <div style="height: 2px; width: 100px; background-color: white; margin: 56px;"></div>
+      </center>
+      <div class="row" style="margin: 0!important;">
+        <div class="col s12">
+          <ul class="tabs">
+            <li class="tab col s3"><a class="active" href="#tab1"><span class="white-text">Rules</span></a></li>
+            <li class="tab col s3"><a href="#tab2"><span class="white-text">Event Timeline</span></a></li>
+            <li class="tab col s3"><a href="#tab3"><span class="white-text">Prizes</span></a></li>
+            <li class="tab col s3"><a href="#tab4"><span class="white-text">FAQ</span></a></li>
+          </ul>
+        </div>
+        <div id="tab1" class="col s12" style="margin: 16px;">
+          <span class="white-text" id="rules" style="font-size: 18px;"></span>
+        </div>
+        <div id="tab2" class="col s12" style="margin: 16px;">
+          <span class="white-text"id="timeline" style="font-size: 18px;"></span>
+        </div>
+        <div id="tab3" class="col s12" style="margin: 16px;">
+          <span class="white-text" id="prizes" style="font-size: 18px;"></span>
+        </div>
+        <div id="tab4" class="col s12" style="margin: 16px;">
+          <span class="white-text" id="faq" style="font-size: 18px;"></span>
+        </div>
+      </div>
+      <center><a href="#register" class="btn-floating btn-large pulse waves-effect waves-light deep-purple darken-4" style="margin-top: 8vmin;"><i class="material-icons">keyboard_arrow_down</i></a></center>
+    </div>
+  </div>
+  <!--Register-->
+  <div id="register" style="background-color: rgba(20, 18, 22, 1)">
+    <div class="container" style="padding-top: 56px; padding-bottom: 56px;">
+      <center>
+        <b><span class="white-text" style="font-size: 36px;">REGISTER</span></b>
+        <div style="height: 2px; width: 100px; background-color: white; margin: 56px;"></div>
+        <a class="wow bounce waves-effect waves-light btn-large deep-purple darken-4 disabled">REGISTER</a>
+        <center><a href="#gallery" class="btn-floating btn-large pulse waves-effect waves-light deep-purple darken-4" style="margin-top: 8vmin;"><i class="material-icons">keyboard_arrow_down</i></a></center>
+      </center>
+    </div>
+  </div>
+  <!--Gallery-->
+  <div id="gallery" style="background-color: rgba(17, 22, 37, 1)">
+    <div class="container" style="padding-top: 56px; padding-bottom: 56px;">
+      <center>
+        <b><span class="white-text" style="font-size: 36px;">GALLERY</span></b>
+        <div style="height: 2px; width: 100px; background-color: white; margin: 56px;"></div>
+      </center>
+      <div class="slideshow-container">
+        <div class="mySlides fade"><center><img class="valign-wrapper" src="gallery/1.jpg" style="height:300px; width: 100%; object-fit: contain;"></center></div>
+        <div class="mySlides fade"><center><img class="valign-wrapper" src="gallery/2.jpg" style="height:300px; width: 100%; object-fit: contain;"></center></div>
+        <div class="mySlides fade"><center><img class="valign-wrapper" src="gallery/3.jpg" style="height:300px; width: 100%; object-fit: contain;"></center></div>
+        <div class="mySlides fade"><center><img class="valign-wrapper" src="gallery/4.jpg" style="height:300px; width: 100%; object-fit: contain;"></center></div>
+        <div class="mySlides fade"><center><img class="valign-wrapper" src="gallery/5.jpg" style="height:300px; width: 100%; object-fit: contain;"></center></div>
+        <div class="mySlides fade"><center><img class="valign-wrapper" src="gallery/6.jpg" style="height:300px; width: 100%; object-fit: contain;"></center></div>
+        <div class="mySlides fade"><center><img class="valign-wrapper" src="gallery/7.jpg" style="height:300px; width: 100%; object-fit: contain;"></center></div>
+        <div class="mySlides fade"><center><img class="valign-wrapper" src="gallery/8.jpg" style="height:300px; width: 100%; object-fit: contain;"></center></div>
+        <div class="mySlides fade"><center><img class="valign-wrapper" src="gallery/9.jpg" style="height:300px; width: 100%; object-fit: contain;"></center></div>
+        <a onclick="plusSlides(-1)" class="btn-floating btn-large waves-effect waves-light prev"><i class="material-icons">arrow_back</i></a>
+        <a onclick="plusSlides(1)" class="btn-floating btn-large waves-effect waves-light next"><i class="material-icons">arrow_forward</i></a>
+      </div>
+      <center>
+        <center><a href="#event_coordinator" class="btn-floating btn-large pulse waves-effect waves-light deep-purple darken-4" style="margin-top: 8vmin;"><i class="material-icons">keyboard_arrow_down</i></a></center>
+      </center>
+    </div>
+  </div>
+  <!--Event Volunteers-->
+  <div id="event_coordinator" style="background-color: rgba(20, 18, 22, 1)">
+    <div class="container" style="padding-top: 56px; padding-bottom: 40px;">
+      <center>
+        <b><span class="white-text" style="font-size: 36px;">EVENT COORDINATORS</span></b>
+        <div style="height: 2px; width: 100px; background-color: white; margin: 56px;"></div>
+      </center>
+      <div class="carousel no-autoinit" id="organizer">
+        <div class="btn-floating btn-large waves-effect waves-light prev"><i class="material-icons">arrow_back</i></div>
+        <div class="btn-floating btn-large waves-effect waves-light next"><i class="material-icons">arrow_forward</i></div>
+      </div>
+    </div>
+  </div>
+
+  <!--Scroll to top button-->
+  <div class="fixed-action-btn" id="scroll_to_top">
+    <a onclick="scrollToTop();" class="btn-floating btn-large waves-effect waves-light deep-purple darken-4">
+      <i class="large material-icons">keyboard_arrow_up</i>
+    </a>
+  </div>
+  <!--Scroll spy-->
+  <div id="scrollspy" class="valign-wrapper" style="background-color: rgba(20, 18, 22, 1)">
+    <a href="#home" id="sid1" class="valign-wrapper"><i class="material-icons prefix">home</i>&nbsp;Home</a><br>
+    <a href="#introduction" id="sid2" class="valign-wrapper"><i class="material-icons prefix">info</i>&nbsp;Introduction</a><br>
+    <a href="#details" id="sid3" class="valign-wrapper"><i class="material-icons prefix">details</i>&nbsp;Details</a><br>
+    <a href="#register" id="sid4" class="valign-wrapper"><i class="material-icons prefix">person_add</i>&nbsp;Register</a>
+    <a href="#gallery" id="sid5" class="valign-wrapper"><i class="material-icons prefix">photo_library</i>&nbsp;Gallery</a><br>
+    <a href="#event_coordinator" id="sid6" class="valign-wrapper"><i class="material-icons prefix">people</i>&nbsp;Event coordinators</a>
+  </div>
+  <!--Footer-->
+  <footer class="page-footer" style="background-color: #212121;">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m6 l6">
+          <h5 class="white-text">OUR LOCATION</h5>
+          <ul>
+            <li><a class="white-text valign-wrapper"><i class="material-icons prefix">location_on</i>&emsp;BPPIMT<br>&emsp;VIP Road<br>&emsp;Kolkata 700052</a></li>
+            <br>
+            <li><a class="white-text valign-wrapper"><i class="material-icons prefix">phone</i>&emsp;+1 234 567 8901<br>&emsp;+1 345 678 9012</a></li>
+            <br>
+            <li><a class="white-text valign-wrapper"><i class="material-icons prefix">email</i>&emsp;mail@example.com</a></li>
+          </ul>
+        </div>
+        <div class="col s12 m6 l6">
+          <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Felixir2k19%2F&tabs=timeline&width=300&height=300&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="300" height="300" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+
+      </div>
+    </div>
+  </footer>
+  <!--JavaScript at end of body for optimized loading-->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous">
+  </script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function() {  
+  //Init Materialize variables
+  M.AutoInit();
+  //Hide scroll to top button
+  $("#scroll_to_top").hide();
+  //Navbar background color change & scroll to top button
+  $(window).scroll(function() {
+    if ($(document).scrollTop() > 50) {
+      $("#navbar").css("background-color", "#212121");
+      $("#navbar").removeClass("z-depth-0");
+      $("#navbar").addClass("z-depth-2");
+      $("#scroll_to_top").fadeIn(250);
+      $("#event_menu").css("background-color", "#311B92");
+      $("#login_signup_menu").css("background-color", "#1976D2");
+    } else {
+      $("#navbar").css("background-color", "transparent");
+      $("#navbar").removeClass("z-depth-2");
+      $("#navbar").addClass("z-depth-0");
+      $("#scroll_to_top").fadeOut(250);
+      $("#event_menu").css("background-color", "#311B9280");
+      $("#login_signup_menu").css("background-color", "#1976D280");
+    }
+  });
+});
+</script>
+<script type="text/javascript" src="js/smooth_scroll.js"></script>
+<script type="text/javascript" src="js/gallery.js"></script>
+<script type="text/javascript" src="js/SmoothScroll.min.js"></script>
+<script type="text/javascript" src="js/wow.min.js"></script>
+<script>
+new WOW().init();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.0/showdown.min.js"></script>
+<script src="js/data.js"></script>
+<!-- <script src="js/data.js" defer></script>   -->
+<script>
+  driver('masquerade')
+</script>
+</body>
+</html>

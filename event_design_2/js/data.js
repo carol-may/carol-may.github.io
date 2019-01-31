@@ -130,38 +130,39 @@ function responsiveness() {
         tables[i].className = 'centered responsive-table'
 }
 
-function driver(id) {
-    showdown.setFlavor('github')
-    var converter = new showdown.Converter()
+// function driver(id) {
+//     showdown.setFlavor('github')
+//     var converter = new showdown.Converter()
 
-    $.ajax({
-        async: true,
-        crossDomain: true,
-        crossOrigin: true,
-        dataType: 'json',
-        url: 'https://elixir-backend.ddns.net/get_events/events/'+ id + '/?format=json',
-        method: 'GET',
-        headers: {
-            // 'Origin': 'http://elixir-backend.ddns.net/',
-            // 'Access-Control-Request-Headers': 'origin, x-requested-with',
-            // 'Access-Control-Request-Method': 'GET'
-        },
-        success: function(data) {
-            createVolunteers(data.volunteers)
-            $('.event').html(data.name)
-            parallax_carousel(data.event_pic_url)
-            $('#introduction-text').html(data.event_description)
-            $('#rules').html(converter.makeHtml(data.rules))
-            $('#timeline').html(converter.makeHtml(data.event_timeline))
-            $('#prizes').html(converter.makeHtml(data.prizes))
-            $('#faq').html(converter.makeHtml(data.faq))
-            $("#register_button_a").attr("href",data.registration_link)
+//     $.ajax({
+//         async: true,
+//         crossDomain: true,
+//         crossOrigin: true,
+//         dataType: 'json',
+//         url: 'https://elixir-backend.ddns.net/get_events/events/'+ id + '/?format=json',
+//         method: 'GET',
+//         headers: {
+//             // 'Origin': 'http://elixir-backend.ddns.net/',
+//             // 'Access-Control-Request-Headers': 'origin, x-requested-with',
+//             // 'Access-Control-Request-Method': 'GET'
+//         },
+//         success: function(data) {
+//             createVolunteers(data.volunteers)
+//             $('.event').html(data.name)
+//             parallax_carousel(data.event_pic_url)
+//             console.log(converter.makeHtml(data.event_description))
+//             $('#introduction-text').html(converter.makeHtml(data.event_description))
+//             $('#rules').html(converter.makeHtml(data.rules))
+//             $('#timeline').html(converter.makeHtml(data.event_timeline))
+//             $('#prizes').html(converter.makeHtml(data.prizes))
+//             $('#faq').html(converter.makeHtml(data.faq))
+//             $("#register_button_a").attr("href",data.registration_link)
 
-            responsiveness()
-            // console.log(converter.makeHtml(data[0].rules))
-        }
-    })
-}
+//             responsiveness()
+//             // console.log(converter.makeHtml(data[0].rules))
+//         }
+//     })
+// }
 
 
 function getUrlParameter(name) {
@@ -172,6 +173,7 @@ function getUrlParameter(name) {
 };
 
 function driver2(id) {
+    $('.dropdown-trigger').dropdown();
     showdown.setFlavor('github')
     var converter = new showdown.Converter()
     id2=getUrlParameter('event')
@@ -195,7 +197,7 @@ function driver2(id) {
             createVolunteers(data.volunteers)
             $('.event').html(data.name)
             parallax_carousel(data.event_pic_url)
-            $('#introduction-text').html(data.event_description)
+            $('#introduction-text').html(converter.makeHtml(data.event_description))
             $('#rules').html(converter.makeHtml(data.rules))
             $('#timeline').html(converter.makeHtml(data.event_timeline))
             $('#prizes').html(converter.makeHtml(data.prizes))

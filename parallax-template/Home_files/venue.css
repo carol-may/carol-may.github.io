@@ -74,3 +74,9 @@
     border-color: #9a28d7;
     color: #9a28d7;
 }
+
+.page-footer {
+    padding-top: 20px;
+    color: #fff;
+    background-color: #ee6e73;
+}

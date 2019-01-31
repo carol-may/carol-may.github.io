@@ -1,25 +1,29 @@
 function parallax_carousel(images) {
-    var imgs = ["images/front_background_1.jpg", "images/front_background_2.jpg"];
+    // var imgs = ["images/front_background_1.jpg", "images/front_background_2.jpg"];
+    // imgs.push(images)
+    // var currentIndex = 0;
+    // var carouselFunction = function showNext() {
+    // currentIndex++;
+    // if (currentIndex == imgs.length) {
+    //     currentIndex = 0;
+    // }
+    // $("#carousel_img").fadeOut('slow', function () {
+    //         $("#carousel_img").attr('src', imgs[currentIndex]);
+    //         $("#carousel_img").fadeIn('slow');
+    //     });
+    // }
+    // setInterval(carouselFunction, 5000);
+    var imgs = [];
     imgs.push(images)
-    var currentIndex = 0;
-    var carouselFunction = function showNext() {
-    currentIndex++;
-    if (currentIndex == imgs.length) {
-        currentIndex = 0;
-    }
-    $("#carousel_img").fadeOut('slow', function () {
-            $("#carousel_img").attr('src', imgs[currentIndex]);
-            $("#carousel_img").fadeIn('slow');
-        });
-    }
-    setInterval(carouselFunction, 5000);
+    
+    $("#carousel_img").attr('src', imgs[0]);
 }
 
 function createVolunteers(data) {
     for(var x = 0; x < data.length; x++) {
         var img = document.createElement('img')
         img.src = data[x].profile_pic_url
-        img.className = 'circle responsive-img'
+        img.className = 'square responsive-img'
         
         var center = document.createElement('center')
         center.appendChild(img)
@@ -151,6 +155,53 @@ function driver(id) {
             $('#timeline').html(converter.makeHtml(data.event_timeline))
             $('#prizes').html(converter.makeHtml(data.prizes))
             $('#faq').html(converter.makeHtml(data.faq))
+            $("#register_button_a").attr("href",data.registration_link)
+
+            responsiveness()
+            // console.log(converter.makeHtml(data[0].rules))
+        }
+    })
+}
+
+
+function getUrlParameter(name) {
+    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+    var results = regex.exec(location.search);
+    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+};
+
+function driver2(id) {
+    showdown.setFlavor('github')
+    var converter = new showdown.Converter()
+    id2=getUrlParameter('event')
+    if (id2)
+    {
+        id=id2
+    }
+    $.ajax({
+        async: true,
+        crossDomain: true,
+        crossOrigin: true,
+        dataType: 'json',
+        url: 'https://elixir-backend.ddns.net/get_events/events/'+ id + '/?format=json',
+        method: 'GET',
+        headers: {
+            // 'Origin': 'http://elixir-backend.ddns.net/',
+            // 'Access-Control-Request-Headers': 'origin, x-requested-with',
+            // 'Access-Control-Request-Method': 'GET'
+        },
+        success: function(data) {
+            createVolunteers(data.volunteers)
+            $('.event').html(data.name)
+            parallax_carousel(data.event_pic_url)
+            $('#introduction-text').html(data.event_description)
+            $('#rules').html(converter.makeHtml(data.rules))
+            $('#timeline').html(converter.makeHtml(data.event_timeline))
+            $('#prizes').html(converter.makeHtml(data.prizes))
+            $('#faq').html(converter.makeHtml(data.faq))
+            $("#register_button_a").attr("href",data.registration_link)
+
             responsiveness()
             // console.log(converter.makeHtml(data[0].rules))
         }

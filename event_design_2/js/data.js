@@ -1,21 +1,7 @@
 function parallax_carousel(images) {
-    // var imgs = ["images/front_background_1.jpg", "images/front_background_2.jpg"];
-    // imgs.push(images)
-    // var currentIndex = 0;
-    // var carouselFunction = function showNext() {
-    // currentIndex++;
-    // if (currentIndex == imgs.length) {
-    //     currentIndex = 0;
-    // }
-    // $("#carousel_img").fadeOut('slow', function () {
-    //         $("#carousel_img").attr('src', imgs[currentIndex]);
-    //         $("#carousel_img").fadeIn('slow');
-    //     });
-    // }
-    // setInterval(carouselFunction, 5000);
     var imgs = [];
     imgs.push(images)
-    
+
     $("#carousel_img").attr('src', imgs[0]);
 }
 
@@ -24,10 +10,10 @@ function createVolunteers(data) {
         var img = document.createElement('img')
         img.src = data[x].profile_pic_url
         img.className = 'square responsive-img'
-        
+
         var center = document.createElement('center')
         center.appendChild(img)
-        
+
         var ul = document.createElement('ul')
         ul.style = 'text-align: center;'
 
@@ -92,7 +78,7 @@ function createVolunteers(data) {
 
         var card = document.createElement('div')
         card.className = 'card hoverable medium'
-        card.style = 'background-color: rgba(17, 22, 37, 1);' 
+        card.style = 'background-color: rgba(17, 22, 37, 1);'
 
         var card_content = document.createElement('div')
         card_content.className = 'card-content'
@@ -128,6 +114,8 @@ function responsiveness() {
     tables = document.getElementsByTagName('table')
     for(var i = 0; i < tables.length; i++)
         tables[i].className = 'centered responsive-table'
+
+    scrollToTop();
 }
 
 // function driver(id) {

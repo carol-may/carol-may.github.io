@@ -16,6 +16,36 @@
   <link rel="stylesheet" type="text/css" href="css/scrollspy.css">
 </head>
 <body>
+  <ul id="event_dropdown_1" class="dropdown-content deep-purple darken-4">
+    <li><a href="?event=break-free" class="white-text">Break Free</a></li>
+    <li><a href="?event=show-stopper" class="white-text">Showstopper</a></li>
+    <li><a href="?event=just-dance" class="white-text">Just Dance</a></li>
+    <li><a href="?event=picturesque" class="white-text">Picturesque</a></li>
+    <li><a href="?event=open-mic" class="white-text">Open Mic</a></li>
+    <li><a href="?event=another-broadway-story" class="white-text">Another Broadway Story</a></li>
+    <li><a href="?event=masquerade" class="white-text">Masquerade</a></li>
+    <li><a href="?event=spectacle-x" class="white-text">Spectacle X</a></li>
+    <li><a href="?event=encore" class="white-text">Encore</a></li>
+    <li><a href="?event=rhapsody" class="white-text">Rhapsody</a></li>
+    <li><a href="?event=rock-o-calypse" class="white-text">Rock-O-Calypse</a></li>
+    <li><a href="?event=papyrus" class="white-text">Papyrus</a></li>
+    <li><a href="?event=fashionista" class="white-text">Fashionista</a></li>
+  </ul>
+  <ul id="event_dropdown_2" class="dropdown-content deep-purple darken-4">
+    <li><a href="?event=break-free" class="white-text">Break Free</a></li>
+    <li><a href="?event=show-stopper" class="white-text">Showstopper</a></li>
+    <li><a href="?event=just-dance" class="white-text">Just Dance</a></li>
+    <li><a href="?event=picturesque" class="white-text">Picturesque</a></li>
+    <li><a href="?event=open-mic" class="white-text">Open Mic</a></li>
+    <li><a href="?event=another-broadway-story" class="white-text">Another Broadway Story</a></li>
+    <li><a href="?event=masquerade" class="white-text">Masquerade</a></li>
+    <li><a href="?event=spectacle-x" class="white-text">Spectacle X</a></li>
+    <li><a href="?event=encore" class="white-text">Encore</a></li>
+    <li><a href="?event=rhapsody" class="white-text">Rhapsody</a></li>
+    <li><a href="?event=rock-o-calypse" class="white-text">Rock-O-Calypse</a></li>
+    <li><a href="?event=papyrus" class="white-text">Papyrus</a></li>
+    <li><a href="?event=fashionista" class="white-text">Fashionista</a></li>
+  </ul>
   <!--Navigation bar-->
   <nav class="z-depth-0" id="navbar" style="position: fixed; z-index: 2; background-color: transparent;">
     <div class="nav-wrapper container transparent">
@@ -28,20 +58,16 @@
       <!--Menu-->
       <ul class="right hide-on-med-and-down">
         <li><a href="#home"><span class="white-text">Home</span></a></li>
-        <li id="event_menu" style="background-color: rgba(49, 27, 146, 0.5);" class="active"><a href="#events"><span class="white-text">Events</span></a></li>
-        <li><a href="#sponsor_us"><span class="white-text">Sponsor Us</span></a></li>
-        <li><a href="#contact_us"><span class="white-text">Contact Us</span></a></li>
-        <li id="login_signup_menu" style="background-color: rgba(25, 118, 210, 0.5);"><a href="#login_signup"><span class="white-text">Login/Sign Up</span></a></li>
+        <li id="event_menu" style="background-color: rgba(49, 27, 146, 0.5);" class="active"><a class="dropdown-trigger white-text" href="#!" data-target="event_dropdown_1">&emsp;Events&emsp;<i class="material-icons right">arrow_drop_down</i></a></a></li>
+        <li><a href="#about_us"><span class="white-text">About Us</span></a></li>
       </ul>
     </div>
   </nav>
   <!--Side navigation bar-->
   <ul class="sidenav" id="mobile-demo" style="background-color: #212121;">
     <li><a href="#home"><span class="white-text">Home</span></a></li>
-    <li class="active"><a href="#events"><span class="white-text">Events</span></a></li>
-    <li><a href="#sponsor_us"><span class="white-text">Sponsor Us</span></a></li>
-    <li><a href="#contact_us"><span class="white-text">Contact Us</span></a></li>
-    <li style="background-color: #1976d2;"><a href="#login_signup"><span class="white-text">Login/Sign Up</span></a></li>
+    <li class="active"><a class="dropdown-trigger white-text" href="#!" data-target="event_dropdown_2">Events<i class="material-icons right" style="color: white;">arrow_drop_down</i></a></a></li>
+    <li><a href="#about_us"><span class="white-text">About Us</span></a></li>
   </ul>
   <!--End of navigation bar-->
   <!--Parallax background-->
@@ -58,7 +84,7 @@
       </div>
     </div>
     <div class="parallax">
-      <img id="carousel_img" src="images/front_background_1.jpg">
+      <img id="carousel_img">
     </div>
   </div>
   <!--Introduction-->
@@ -105,7 +131,7 @@
           <span class="white-text" id="prizes" style="font-size: 18px;"></span>
         </blockquote>
         </div>
-        
+
         <div id="tab4" class="col s12" style="margin: 16px;">
         <blockquote>
           <span class="white-text" id="faq" style="font-size: 18px;"></span>
@@ -211,7 +237,7 @@
   </script>
   <script type="text/javascript" src="js/materialize.min.js"></script>
   <script type="text/javascript">
-  $(document).ready(function() {  
+  $(document).ready(function() {
   //Init Materialize variables
   M.AutoInit();
   //Hide scroll to top button
@@ -224,14 +250,12 @@
       $("#navbar").addClass("z-depth-2");
       $("#scroll_to_top").fadeIn(250);
       $("#event_menu").css("background-color", "#311B92");
-      $("#login_signup_menu").css("background-color", "#1976D2");
     } else {
       $("#navbar").css("background-color", "transparent");
       $("#navbar").removeClass("z-depth-2");
       $("#navbar").addClass("z-depth-0");
       $("#scroll_to_top").fadeOut(250);
       $("#event_menu").css("background-color", "#311B9280");
-      $("#login_signup_menu").css("background-color", "#1976D280");
     }
   });
 });

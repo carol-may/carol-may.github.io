@@ -114,8 +114,6 @@ function responsiveness() {
     tables = document.getElementsByTagName('table')
     for(var i = 0; i < tables.length; i++)
         tables[i].className = 'centered responsive-table'
-
-    scrollToTop();
 }
 
 // function driver(id) {

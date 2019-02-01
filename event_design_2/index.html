@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!--Custom CSS-->
+  <link rel="stylesheet" type="text/css" href="css/navbar.css">
+  <link rel="stylesheet" type="text/css" href="css/misc.css">
+  <link rel="stylesheet" type="text/css" href="css/text_changer.css">
+  <link rel="stylesheet" type="text/css" href="css/gallery.css">
+  <link rel="stylesheet" type="text/css" href="css/animate.css">
+  <link rel="stylesheet" type="text/css" href="css/scrollspy.css">
+</head>
+<body>
+  <ul id="event_dropdown_1" class="dropdown-content deep-purple darken-4">
+    <li><a href="events.html?event=break-free" class="white-text">Break Free</a></li>
+    <li><a href="events.html?event=show-stopper" class="white-text">Showstopper</a></li>
+    <li><a href="events.html?event=just-dance" class="white-text">Just Dance</a></li>
+    <li><a href="events.html?event=picturesque" class="white-text">Picturesque</a></li>
+    <li><a href="events.html?event=open-mic" class="white-text">Open Mic</a></li>
+    <li><a href="events.html?event=another-broadway-story" class="white-text">Another Broadway Story</a></li>
+    <li><a href="events.html?event=masquerade" class="white-text">Masquerade</a></li>
+    <li><a href="events.html?event=spectacle-x" class="white-text">Spectacle X</a></li>
+    <li><a href="events.html?event=encore" class="white-text">Encore</a></li>
+    <li><a href="events.html?event=rhapsody" class="white-text">Rhapsody</a></li>
+    <li><a href="events.html?event=rock-o-calypse" class="white-text">Rock-O-Calypse</a></li>
+    <li><a href="events.html?event=fashionista" class="white-text">Fashionista</a></li>
+    <li><a href="events.html?event=papyrus" class="white-text">Papyrus</a></li>
+  </ul>
+  <ul id="event_dropdown_2" class="dropdown-content deep-purple darken-4">
+    <li><a href="events.html?event=break-free" class="white-text">Break Free</a></li>
+    <li><a href="events.html?event=show-stopper" class="white-text">Showstopper</a></li>
+    <li><a href="events.html?event=just-dance" class="white-text">Just Dance</a></li>
+    <li><a href="events.html?event=picturesque" class="white-text">Picturesque</a></li>
+    <li><a href="events.html?event=open-mic" class="white-text">Open Mic</a></li>
+    <li><a href="events.html?event=another-broadway-story" class="white-text">Another Broadway Story</a></li>
+    <li><a href="events.html?event=masquerade" class="white-text">Masquerade</a></li>
+    <li><a href="events.html?event=spectacle-x" class="white-text">Spectacle X</a></li>
+    <li><a href="events.html?event=encore" class="white-text">Encore</a></li>
+    <li><a href="events.html?event=rhapsody" class="white-text">Rhapsody</a></li>
+    <li><a href="events.html?event=rock-o-calypse" class="white-text">Rock-O-Calypse</a></li>
+    <li><a href="events.html?event=fashionista" class="white-text">Fashionista</a></li>
+    <li><a href="events.html?event=papyrus" class="white-text">Papyrus</a></li>
+  </ul>
+  <!--Navigation bar-->
+  <nav class="z-depth-0" id="navbar" style="position: fixed; z-index: 2; background-color: transparent;">
+    <div class="nav-wrapper container transparent">
+      <!--Hamburger menu icon-->
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <!--Logo-->
+      <a href="#!" class="brand-img img">
+        <img src="images/logo.png" height="56px;" width="auto;" style="padding-top: 8px; padding-bottom: 8px;">
+      </a>
+      <!--Menu-->
+      <ul class="right hide-on-med-and-down">
+        <li><a id="home_menu" href="#home" style="background-color: rgba(49, 27, 146, 0.5);" class="active"><span class="white-text">Home</span></a></li>
+        <li><a class="dropdown-trigger white-text" href="#!" data-target="event_dropdown_1">&emsp;Events&emsp;<i class="material-icons right">arrow_drop_down</i></a></a></li>
+        <li><a href="#about_us"><span class="white-text">About Us</span></a></li>
+      </ul>
+    </div>
+  </nav>
+  <!--Side navigation bar-->
+  <ul class="sidenav" id="mobile-demo" style="background-color: #212121;">
+    <li><a href="#home" class="active"><span class="white-text">Home</span></a></li>
+    <li><a class="dropdown-trigger white-text" href="#!" data-target="event_dropdown_2">Events<i class="material-icons right" style="color: white;">arrow_drop_down</i></a></a></li>
+    <li><a href="#about_us"><span class="white-text">About Us</span></a></li>
+  </ul>
+  <!--End of navigation bar-->
+  <!--Parallax background-->
+  <div id="home" class="parallax-container" style="height: 100vh; z-index: 1;">
+    <div class="center valign-wrapper" style="height: 100%; background: rgba(0, 0, 0, 0.5);">
+      <div class="row">
+        <div class="col s3 l3 m3">
+          <div id="days" class="red darken-3 timer"></div>
+          <b><span class="red-text">DAYS</span></b>
+        </div>
+        <div class="col s3 l3 m3">
+          <div id="hours" class="blue darken-3 timer"></div>
+          <b><span class="blue-text">HOURS</span></b>
+        </div>
+        <div class="col s3 l3 m3">
+          <div id="minutes" class="yellow darken-3 timer"></div>
+          <b><span class="yellow-text">MINUTES</span></b>
+        </div>
+        <div class="col s3 l3 m3">
+          <div id="seconds" class="green darken-3 timer"></div>
+          <b><span class="green-text">SECONDS</span></b>
+        </div>
+        <b>
+          <span class="white-text" style="font-size: 50px;">ELIXIR '19</span><br>
+          <span class="white-text" style="font-size: 40px;">MARCH 13 - 18, 2019</span>
+        </b>
+        <center><a href="#about_elixir" class="btn-floating btn-large pulse waves-effect waves-light deep-purple darken-4" style="margin-top: 4vmin;"><i class="material-icons">keyboard_arrow_down</i></a></center>
+      </div>
+    </div>
+    <div class="parallax">
+      <img id="carousel_img" src="images/nikhil_d_souza.jpg">
+    </div>
+  </div>
+  <!--Introduction-->
+  <div id="about_elixir" style="background-color: rgba(20, 18, 22, 1)">
+    <div class="container" style="padding-top: 56px; padding-bottom: 56px;">
+      <div class="row">
+        <center>
+          <b><span class="white-text" style="font-size: 36px;">ABOUT ELIXIR</span></b>
+          <div style="height: 2px; width: 100px; background-color: white; margin: 56px;"></div>
+        </center>
+      </div>
+      <div class="row valign-wrapper hide-on-small-only">
+        <div class="col s12 m6 l6">
+          <blockquote>
+            <span class="white-text" id="introduction-text" style="opacity: 0.75; font-size: 18px;">
+              Elixir is the socio-cultural fest of B.P.PODDAR INSTITUTE OF MANAGEMENT
+              AND TECHNOLOGY, Kolkata. Over the years, Elixir has established a legacy of fellowship
+              and pride which fosters cultural diversity and stimulates creativity and imagination.
+              This spring we unveil a fest which shall witness days of absolute ecstasy, providing the
+              budding artists a competing platform in diverse fields such as music, dance, theatre,
+              photography, literature. So get ready to bask in the glory of a magnificence of an
+              unprecedented scale and embrace all the fun and frolic because ladies and gentlemen,
+              ELIXIR '19 will be unparalleled! Let 2019 spring bring to you the ’19 edition of Elixir which means
+              2019 will not just be another year, it will be THE year!
+            </span>
+          </blockquote>
+        </div>
+        <div class="col s12 m6 l6">
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/H7uPG5to-d8" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+      <div class="row hide-on-med-and-up">
+        <div class="col s12">
+          <blockquote>
+            <span class="white-text" id="introduction-text" style="opacity: 0.75; font-size: 18px;">
+              Elixir is the socio-cultural fest of B.P.PODDAR INSTITUTE OF MANAGEMENT
+              AND TECHNOLOGY, Kolkata. Over the years, Elixir has established a legacy of fellowship
+              and pride which fosters cultural diversity and stimulates creativity and imagination.
+              This spring we unveil a fest which shall witness days of absolute ecstasy, providing the
+              budding artists a competing platform in diverse fields such as music, dance, theatre,
+              photography, literature. So get ready to bask in the glory of a magnificence of an
+              unprecedented scale and embrace all the fun and frolic because ladies and gentlemen,
+              ELIXIR '19 will be unparalleled! Let 2019 spring bring to you the ’19 edition of Elixir which means
+              2019 will not just be another year, it will be THE year!
+            </span>
+          </blockquote>
+        </div>
+        <div class="col s12">
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/H7uPG5to-d8" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s6 m3 l3">
+          <div class="card z-depth-0" style="background-color: rgba(20, 18, 22, 1)">
+            <div class="row valign-wrapper">
+              <div class="col s1"></div>
+              <div class="col s2">
+                <i class="medium material-icons" style="color: white;">date_range</i>
+              </div>
+              <div class="col s9">
+                <div class="card-content white-text">
+                  <span class="card-title">5</span>
+                  <p>Days</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col s6 m3 l3">
+          <div class="card z-depth-0" style="background-color: rgba(20, 18, 22, 1)">
+            <div class="row valign-wrapper">
+              <div class="col s1"></div>
+              <div class="col s2">
+                <i class="medium material-icons" style="color: white;">public</i>
+              </div>
+              <div class="col s9">
+                <div class="card-content white-text">
+                  <span class="card-title">3</span>
+                  <p>Venues</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col s6 m3 l3">
+          <div class="card z-depth-0" style="background-color: rgba(20, 18, 22, 1)">
+            <div class="row valign-wrapper">
+              <div class="col s1"></div>
+              <div class="col s2">
+                <i class="medium material-icons" style="color: white;">event_seat</i>
+              </div>
+              <div class="col s9">
+                <div class="card-content white-text">
+                  <span class="card-title">13</span>
+                  <p>Events</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col s6 m3">
+          <div class="card z-depth-0" style="background-color: rgba(20, 18, 22, 1)">
+            <div class="row valign-wrapper">
+              <div class="col s1"></div>
+              <div class="col s2">
+                <i class="medium material-icons" style="color: white;">directions_run</i>
+              </div>
+              <div class="col s9">
+                <div class="card-content white-text">
+                  <span class="card-title">25K</span>
+                  <p>Footfall</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row center">
+        <a href="#events" class="btn-floating btn-large pulse waves-effect waves-light deep-purple darken-4" style="margin-top: 4vmin;"><i class="material-icons">keyboard_arrow_down</i></a>
+      </div>
+    </div>
+  </div>
+  <div id="events" style="background-color: rgba(17, 22, 37, 1)">
+    <div class="container" style="padding-top: 56px; padding-bottom: 56px;">
+      <center>
+        <b><span class="white-text" style="font-size: 36px;">EVENTS</span></b>
+        <div style="height: 2px; width: 100px; background-color: white; margin: 56px;"></div>
+      </center>
+      <div class="row center">
+        <div class="col s6 m3">
+          <div class="card deep-purple darken-4">
+            <div class="card-image">
+              <img src="https://s3.ap-south-1.amazonaws.com/elixir-backend-assets/Elixir'19+E-brochure-just-dance.jpg">
+            </div>
+            <div class="card-content">
+              <span class="card-title white-text truncate">Just Dance</span>
+            </div>
+          </div>
+        </div>
+        <div class="col s6 m3">
+          <div class="card deep-purple darken-4">
+            <div class="card-image">
+              <img src="https://s3.ap-south-1.amazonaws.com/elixir-backend-assets/Elixir'19+E-brochure-picturesque.jpg">
+            </div>
+            <div class="card-content">
+              <span class="card-title white-text truncate">Picturesque</span>
+            </div>
+          </div>
+        </div>
+        <div class="col s6 m3">
+          <div class="card deep-purple darken-4">
+            <div class="card-image">
+              <img src="https://s3.ap-south-1.amazonaws.com/elixir-backend-assets/Elixir'19+E-brochure-open-mic.jpg">
+            </div>
+            <div class="card-content">
+              <span class="card-title white-text truncate">Open Mic</span>
+            </div>
+          </div>
+        </div>
+        <div class="col s6 m3">
+          <div class="card deep-purple darken-4">
+            <div class="card-image">
+              <img src="https://s3.ap-south-1.amazonaws.com/elixir-backend-assets/Elixir'19+E-brochure-another-broadway-story.jpg">
+            </div>
+            <div class="card-content">
+              <span class="card-title white-text truncate">Another Broadway Story</span>
+            </div>
+          </div>
+        </div>
+        <div class="col s6 m3">
+          <div class="card deep-purple darken-4">
+            <div class="card-image">
+              <img src="https://s3.ap-south-1.amazonaws.com/elixir-backend-assets/Elixir'19+E-brochure-spectacle-x.jpg">
+            </div>
+            <div class="card-content">
+              <span class="card-title white-text truncate">Spectacle X</span>
+            </div>
+          </div>
+        </div>
+        <div class="col s6 m3">
+          <div class="card deep-purple darken-4">
+            <div class="card-image">
+              <img src="https://s3.ap-south-1.amazonaws.com/elixir-backend-assets/Elixir'19+E-brochure-encore.jpg">
+            </div>
+            <div class="card-content">
+              <span class="card-title white-text truncate">Encore</span>
+            </div>
+          </div>
+        </div>
+        <div class="col s6 m3">
+          <div class="card deep-purple darken-4">
+            <div class="card-image">
+              <img src="https://s3.ap-south-1.amazonaws.com/elixir-backend-assets/Elixir'19+E-brochure-rock-o-calypse.jpg">
+            </div>
+            <div class="card-content">
+              <span class="card-title white-text truncate">Rock-O-Calypse</span>
+            </div>
+          </div>
+        </div>
+        <div class="col s6 m3">
+          <div class="card deep-purple darken-4">
+            <div class="card-image">
+              <img src="https://s3.ap-south-1.amazonaws.com/elixir-backend-assets/Elixir'19+E-brochure-break-free.jpg">
+            </div>
+            <div class="card-content">
+              <span class="card-title white-text truncate">Break Free</span>
+            </div>
+          </div>
+        </div>
+        <div class="col s6 m3">
+          <div class="card deep-purple darken-4">
+            <div class="card-image">
+              <img src="https://s3.ap-south-1.amazonaws.com/elixir-backend-assets/Elixir'19+E-brochure-fashionista.jpg">
+            </div>
+            <div class="card-content">
+              <span class="card-title white-text truncate">Fashionista</span>
+            </div>
+          </div>
+        </div>
+        <div class="col s6 m3">
+          <div class="card deep-purple darken-4">
+            <div class="card-image">
+              <img src="https://s3.ap-south-1.amazonaws.com/elixir-backend-assets/Elixir'19+E-brochure-show-stopper.jpg">
+            </div>
+            <div class="card-content">
+              <span class="card-title white-text truncate">Showstopper</span>
+            </div>
+          </div>
+        </div>
+        <div class="col s6 m3">
+          <div class="card deep-purple darken-4">
+            <div class="card-image">
+              <img src="https://s3.ap-south-1.amazonaws.com/elixir-backend-assets/Elixir'19+E-brochure-rhapsody.jpg">
+            </div>
+            <div class="card-content">
+              <span class="card-title white-text truncate">Rhapsody</span>
+            </div>
+          </div>
+        </div>
+        <div class="col s6 m3">
+          <div class="card deep-purple darken-4">
+            <div class="card-image">
+              <img src="https://s3.ap-south-1.amazonaws.com/elixir-backend-assets/Elixir'19+E-brochure-masquerade.jpg">
+            </div>
+            <div class="card-content">
+              <span class="card-title white-text truncate">Masquerade</span>
+            </div>
+          </div>
+        </div>
+        <div class="col s6 m3">
+          <div class="card deep-purple darken-4">
+            <div class="card-image">
+              <img src="https://s3.ap-south-1.amazonaws.com/elixir-backend-assets/Elixir'19+E-brochure-papyrus.jpg">
+            </div>
+            <div class="card-content">
+              <span class="card-title white-text truncate">Papyrus</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <center><a href="#sponsors" class="btn-floating btn-large pulse waves-effect waves-light deep-purple darken-4" style="margin-top: 8vmin;"><i class="material-icons">keyboard_arrow_down</i></a></center>
+    </div>
+  </div>
+  <!--Register-->
+  <div id="sponsors" style="background-color: rgba(20, 18, 22, 1)">
+    <div class="container" style="padding-top: 56px; padding-bottom: 56px;">
+      <center>
+        <b><span class="white-text" style="font-size: 36px;">SPONSORS</span></b>
+        <div style="height: 2px; width: 100px; background-color: white; margin: 56px;"></div>
+        <div class="row valign-wrapper">
+          <div class="col s12 m4 l4">
+            <img src="images/sponsor1.jpg" style="width: 100%; height: auto;">
+          </div>
+          <div class="col s12 m4 l4">
+            <img src="images/sponsor2.png" style="width: 100%; height: auto;">
+          </div>
+        </div>
+        <center><a href="#event_coordinator" class="btn-floating btn-large pulse waves-effect waves-light deep-purple darken-4" style="margin-top: 8vmin;"><i class="material-icons">keyboard_arrow_down</i></a></center>
+      </center>
+    </div>
+    <!-- Gallery
+    <div id="gallery" style="background-color: rgba(17, 22, 37, 1)">
+    <div class="container" style="padding-top: 56px; padding-bottom: 56px;">
+    <center>
+    <b><span class="white-text" style="font-size: 36px;">GALLERY</span></b>
+    <div style="height: 2px; width: 100px; background-color: white; margin: 56px;"></div>
+  </center>
+  <div class="slideshow-container">
+  <div class="mySlides fade"><center><img class="valign-wrapper" src="gallery/1.jpg" style="height:300px; width: 100%; object-fit: contain;"></center></div>
+  <div class="mySlides fade"><center><img class="valign-wrapper" src="gallery/2.jpg" style="height:300px; width: 100%; object-fit: contain;"></center></div>
+  <div class="mySlides fade"><center><img class="valign-wrapper" src="gallery/3.jpg" style="height:300px; width: 100%; object-fit: contain;"></center></div>
+  <div class="mySlides fade"><center><img class="valign-wrapper" src="gallery/4.jpg" style="height:300px; width: 100%; object-fit: contain;"></center></div>
+  <div class="mySlides fade"><center><img class="valign-wrapper" src="gallery/5.jpg" style="height:300px; width: 100%; object-fit: contain;"></center></div>
+  <div class="mySlides fade"><center><img class="valign-wrapper" src="gallery/6.jpg" style="height:300px; width: 100%; object-fit: contain;"></center></div>
+  <div class="mySlides fade"><center><img class="valign-wrapper" src="gallery/7.jpg" style="height:300px; width: 100%; object-fit: contain;"></center></div>
+  <div class="mySlides fade"><center><img class="valign-wrapper" src="gallery/8.jpg" style="height:300px; width: 100%; object-fit: contain;"></center></div>
+  <div class="mySlides fade"><center><img class="valign-wrapper" src="gallery/9.jpg" style="height:300px; width: 100%; object-fit: contain;"></center></div>
+  <a onclick="plusSlides(-1)" class="btn-floating btn-large waves-effect waves-light prev"><i class="material-icons">arrow_back</i></a>
+  <a onclick="plusSlides(1)" class="btn-floating btn-large waves-effect waves-light next"><i class="material-icons">arrow_forward</i></a>
+</div>
+<center>
+<center><a href="#event_coordinator" class="btn-floating btn-large pulse waves-effect waves-light deep-purple darken-4" style="margin-top: 8vmin;"><i class="material-icons">keyboard_arrow_down</i></a></center>
+</center>
+</div>
+</div> -->
+<!--Event Volunteers-->
+<div id="event_coordinator" style="background-color: rgba(17, 22, 37, 1)">
+  <div class="container" style="padding-top: 56px; padding-bottom: 40px;">
+    <center>
+      <b><span class="white-text" style="font-size: 36px;">EVENT COORDINATORS</span></b>
+      <div style="height: 2px; width: 100px; background-color: white; margin: 56px;"></div>
+    </center>
+    <div class="carousel no-autoinit" id="organizer">
+      <div class="btn-floating btn-large waves-effect waves-light prev"><i class="material-icons">arrow_back</i></div>
+      <div class="btn-floating btn-large waves-effect waves-light next"><i class="material-icons">arrow_forward</i></div>
+    </div>
+  </div>
+</div>
+
+<!--Scroll to top button-->
+<div class="fixed-action-btn" id="scroll_to_top">
+  <a onclick="scrollToTop();" class="btn-floating btn-large waves-effect waves-light deep-purple darken-4">
+    <i class="large material-icons">keyboard_arrow_up</i>
+  </a>
+</div>
+<!--Scroll spy-->
+<div id="scrollspy" class="valign-wrapper" style="background-color: rgba(17, 22, 37, 1)">
+  <a href="#home" id="sid1" class="valign-wrapper"><i class="material-icons prefix">home</i>&nbsp;Home</a><br>
+  <a href="#about_elixir" id="sid2" class="valign-wrapper"><i class="material-icons prefix">info</i>&nbsp;About Elixir</a><br>
+  <a href="#details" id="sid3" class="valign-wrapper"><i class="material-icons prefix">details</i>&nbsp;Details</a><br>
+  <a href="#register" id="sid4" class="valign-wrapper"><i class="material-icons prefix">person_add</i>&nbsp;Register</a>
+  <a href="#event_coordinator" id="sid5" class="valign-wrapper"><i class="material-icons prefix">people</i>&nbsp;Event coordinators</a>
+</div>
+<!--Footer-->
+<footer class="page-footer" style="background-color: #212121;">
+  <div class="container">
+    <div class="row">
+      <div class="col s12 m6 l6">
+        <h5 class="white-text">OUR LOCATION</h5>
+        <ul>
+          <li><a class="white-text valign-wrapper"><i class="material-icons prefix">location_on</i>&emsp;BPPIMT<br>&emsp;VIP Road<br>&emsp;Kolkata 700052</a></li>
+          <br>
+          <li><a class="white-text valign-wrapper"><i class="material-icons prefix">phone</i>&emsp;+1 234 567 8901<br>&emsp;+1 345 678 9012</a></li>
+          <br>
+          <li><a class="white-text valign-wrapper"><i class="material-icons prefix">email</i>&emsp;mail@example.com</a></li>
+        </ul>
+      </div>
+      <div class="col s12 m6 l6">
+        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Felixir2k19%2F&tabs=timeline&width=300&height=300&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="300" height="300" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+
+    </div>
+  </div>
+</footer>
+<!--JavaScript at end of body for optimized loading-->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+crossorigin="anonymous">
+</script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+  //Init Materialize variables
+  M.AutoInit();
+  //Hide scroll to top button
+  $("#scroll_to_top").hide();
+  //Navbar background color change & scroll to top button
+  $(window).scroll(function() {
+    if ($(document).scrollTop() > 50) {
+      $("#navbar").css("background-color", "#212121");
+      $("#navbar").removeClass("z-depth-0");
+      $("#navbar").addClass("z-depth-2");
+      $("#scroll_to_top").fadeIn(250);
+      $("#home_menu").css("background-color", "#311B92");
+    } else {
+      $("#navbar").css("background-color", "transparent");
+      $("#navbar").removeClass("z-depth-2");
+      $("#navbar").addClass("z-depth-0");
+      $("#scroll_to_top").fadeOut(250);
+      $("#home_menu").css("background-color", "#311B9280");
+    }
+  });
+});
+</script>
+<script type="text/javascript" src="js/smooth_scroll.js"></script>
+<!-- <script type="text/javascript" src="js/gallery.js"></script> -->
+<script type="text/javascript" src="js/SmoothScroll.min.js"></script>
+<script type="text/javascript" src="js/wow.min.js"></script>
+<script>
+new WOW().init();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.0/showdown.min.js"></script>
+<script src="js/data.js"></script>
+<!-- <script src="js/data.js" defer></script>   -->
+<script>
+//driver2('another-broadway-story')
+</script>
+<script>
+var countDownDate = new Date("Mar 12, 2019 00:00:00").getTime();
+var x = setInterval(function() {
+  var now = new Date().getTime();
+  var distance = countDownDate - now;
+
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  $("#days").html(days);
+  $("#hours").html(hours);
+  $("#minutes").html(minutes);
+  $("#seconds").html(seconds);
+
+  if (distance < 0) {
+    clearInterval(x);
+    $("#days").html(0);
+    $("#hours").html(0);
+    $("#minutes").html(0);
+    $("#seconds").html(0);
+  }
+}, 1000);
+</script>
+</body>
+</html>

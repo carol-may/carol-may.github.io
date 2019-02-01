@@ -31,6 +31,7 @@ function submitForm(e){
   console.log(college)
   console.log(phone)
   console.log(event)
+  
  
   //Save reg
   saveRegistration(name, college, email, phone, event);
@@ -62,4 +63,25 @@ function saveRegistration(name, college, email, phone, event){
     phone:phone,
     event:event
   });
+  id=window.location.href.split('/')
+  id=id[id.length-1]
+  if (id.endsWith('.html'))
+  {
+    id=id.split('.html')[0]  
+  }
+  $.ajax({
+    async: true,
+    crossDomain: true,
+    crossOrigin: true,
+    dataType: 'json',
+    url: 'https://elixir-backend.ddns.net/get_events/events_r/'+ id + '/?format=json',
+    method: 'GET',
+    headers: {
+        // 'Origin': 'http://elixir-backend.ddns.net/',
+        // 'Access-Control-Request-Headers': 'origin, x-requested-with',
+        // 'Access-Control-Request-Method': 'GET'
+    },
+    success: function(data) {
+    }
+  })
 }
